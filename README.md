@@ -27,6 +27,20 @@ The author consulted the following resources when building this tutorial:
 - [Additional Resources](#additional-resources)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
+# Data
+
+Database_Lab_Data.xlsx
+
+Player_Birthplaces.csv
+
+Team_Locations.csv
+
+Combined_Transactions.csv
+
+Zip in the GitHub
+
+Google Drive link (ND users only) https://drive.google.com/drive/folders/1pmK-MqJT7aEzOBAVNNtoV5VidCCc99T8?usp=sharing
+
 # Tidy Data Principles
 
 Hadley Wickham's 2014 article in the *Journal of Statistical Software* outlines the foundations and principles of tidy data. 
@@ -125,29 +139,11 @@ As described in Library Carpentry's ["Tidy data for librarians" tutorial](https:
 
 <blockquote>Q2: What fields are represented in these datasets? Describe the data fields in your own words. Use the language of string, double, and integer to describe the data fields.</blockquote>
 
-<table>
- <tr>
-  <th><Data Type</th>
-  <th>Description</th>
-  <th>Example</th>
- </tr>
- <tr>
-  <td>String</td>
-  <td>Used to store text or a string of non-integer characters.</td>
-  <td>"This classroom is in the HSSC" or "student".</td>
- </tr>
- <tr>
-  <td>Integer</td>
-  <td>Used to store positive or negative whole numbers.</td>
-  <td>-25, 0, 25</td>
- </tr>
- <tr>
-  <td>Double</td>
-  <td>Used to store precise numerical values that include decimal points.</td>
-  <td>3.14159265359</td>
- </tr>
- </table>
- 
+Type | Description | Example
+--- | --- | ---
+String | Used to store text or a string of non-integer characters | "This classroom is in Bond Hall" or "student"
+Integer | Used to store positive or negative whole numbers | -25, 0, 25
+Double | Used to store precise numerical values that include decimal points | 3.14159265359
  
 ### Identify Patterns and Brainstorm Solutions
 
@@ -183,17 +179,10 @@ Some common scenarios where you might use OpenRefine include:
 
 #### Installing and Loading Data in OpenRefine
 
-6- Navigate to https://github.com/OpenRefine/OpenRefine/releases/ and download https://github.com/OpenRefine/OpenRefine/releases/download/3.3-rc1/openrefine-linux-3.3-rc1.tar.gz. 
-  * Open the terminal, navigate to the `Downloads` folder.
-  * Use the following command to install the program.
-
-```
-tar xzf openrefine-linux-2.7.tar.gz
-cd openrefine-2.7
-./refine
-```  
-  * Substitute the relevant version and release numbers.
-  
+6- Navigate to https://openrefine.org/download.html and download the appropriate version for your OS.
+- Windows: https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-win-with-java-3.4.1.zip
+- Mac: https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-mac-3.4.1.dmg
+- Google Chromebook: https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-linux-3.4.1.tar.gz
   * If you are getting memory-related error messages, visit https://github.com/OpenRefine/OpenRefine/wiki/FAQ%3A-Allocate-More-Memory#linux-or-mac to troubleshoot.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_a.png?raw=true" alt="Capture_2"  /></p>
@@ -204,7 +193,7 @@ cd openrefine-2.7
 
 9- Select the option to `Get data from This Computer.`
 
-10- Select `CSC_Database_Lab_Player_Birthplaces.csv` file.
+10- Select `Player_Birthplaces.csv` file.
 
 11- Click `Next.`
 
@@ -266,7 +255,14 @@ You can also invert the filter to show all records which do not match your selec
 
 23- Use the `Edit` option to address a pattern error.
 
-24- Do this for other pattern errors. Consult [the key for ISO 3166-1 alpha-2 two-letter country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table) and [the United States Postal Service's List of Acronyms/Abbreviations](https://about.usps.com/publications/pub32/pub32_acn.htm) as needed. You may also need to consult Wikipedia's [list of baseball team abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations) and [Glossary of Baseball Jargon](https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball_jargon_(N)).
+24- Do this for other pattern errors. 
+
+Consult the following resources as needed to understand this data:
+- [ISO 3166 country code table (Wikipedia)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table)
+- [United Nations geographic regions](https://unstats.un.org/unsd/methodology/m49/)
+- [USPS list of state abbreviations](https://about.usps.com/who-we-are/postal-history/state-abbreviations.htm)
+- [Wikipedia list of baseball team abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations)
+- [Wikipedia glossary of baseball jargon](https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball)
 
 #### Exporting from OpenRefine
 
@@ -312,7 +308,7 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 33- Under `Get External Data` select the `From Text` option.
 
-34- In `Sheet1`, select the `CSC_Database_Lab_PlayerBirthplaces.csv` file.
+34- In `Sheet1`, select the `Player_Birthplaces.csv` file.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_8.png?raw=true" alt="Capture_2"  /></p>
 
@@ -398,7 +394,12 @@ We are going to go through a process in Microsoft Excel where we load our indivi
  
 59- Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
  
-Consult [the key for ISO 3166-1 alpha-2 two-letter country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table) and [the United States Postal Service's List of Acronyms/Abbreviations](https://about.usps.com/publications/pub32/pub32_acn.htm) as needed. You may also need to consult Wikipedia's [list of baseball team abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations) and [Glossary of Baseball Jargon](https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball_jargon_(N)).
+Consult the following resources as needed to understand this data:
+- [ISO 3166 country code table (Wikipedia)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table)
+- [United Nations geographic regions](https://unstats.un.org/unsd/methodology/m49/)
+- [USPS list of state abbreviations](https://about.usps.com/who-we-are/postal-history/state-abbreviations.htm)
+- [Wikipedia list of baseball team abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations)
+- [Wikipedia glossary of baseball jargon](https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball)
 
 <blockquote>To change all cells in a column, click the cell in the first non-header row. Press <Control> and the down arrow key to select all cells with data in that column. Press <Control> and <D> to copy the first value into the other selected cells. Alternatively, move your cursor over the bottom right-hand corner of the cell in the first non-header row. Click and drag the plus icon that appears down through the column to copy the value in the first cell into the subsequent cells.</blockquote>
 
@@ -431,6 +432,8 @@ Building in quality assurance constraints into a data entry workflow can help mi
 ## Survey Versus Spreadsheet
 
 One option is use a survey with some pre-defined choices or drop-down options.
+
+NEED TO CHANGE TO GOOGLE FORM INSTRUCTIONS
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_23.png?raw=true" alt="Capture_2"  /></p>
 
