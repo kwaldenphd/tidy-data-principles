@@ -29,17 +29,17 @@ The author consulted the following resources when building this tutorial:
 
 # Data
 
-Database_Lab_Data.xlsx
+# Data
 
-Player_Birthplaces.csv
+The following data files are used in this tutorial:
+- `Tidy_Data_Lab_Combined_Workbook.xlsx`
+- `Tidy_Data_Lab_Player_Birthplaces.csv`
+- `Tidy_Data_Lab_Team_Locations.csv`
+- `Tidy_Data_Lab_Combined_Transactions.csv`
 
-Team_Locations.csv
+They can be downloaded as a `zip` folder in this GitHub repo.
 
-Combined_Transactions.csv
-
-Zip in the GitHub
-
-Google Drive link (ND users only) https://drive.google.com/drive/folders/1pmK-MqJT7aEzOBAVNNtoV5VidCCc99T8?usp=sharing
+[Link to access via Google Drive (ND users only)](https://drive.google.com/drive/folders/1pmK-MqJT7aEzOBAVNNtoV5VidCCc99T8?usp=sharing)
 
 # Tidy Data Principles
 
@@ -131,9 +131,9 @@ As described in Library Carpentry's ["Tidy data for librarians" tutorial](https:
  
 ## Dealing With Messy Data
 
-1- Extract the contents of the `database_lab_data.zip` folder. The `zip` folder is available on P-Web.
+1- Extract the contents of the `tidy_data_lab_data.zip` folder. 
 
-2- Open the `CSC_Database_Lab_Player_Birthplaces.csv` and `CSC_Database_Lab_TeamLocations.csv` files in a spreadsheet program.
+2- Open the `Tidy_Data_Lab_Player_Birthplaces.csv` and `Tidy_Data_Lab_Team_Locations.csv` files in a spreadsheet program.
 
 3- Explore both files.
 
@@ -147,7 +147,7 @@ Double | Used to store precise numerical values that include decimal points | 3.
  
 ### Identify Patterns and Brainstorm Solutions
 
-4- Compare what you see in the `CSC_Database_Lab_Player_Birthplaces.csv` and `CSC_Database_Lab_TeamLocations.csv` files to the tidy data principles outlined above.
+4- Compare what you see in the `Tidy_Data_Lab_Player_Birthplaces.csv` and `Tidy_Data_Lab_Team_Locations.csv` files to the tidy data principles outlined above.
 
 5- Start by looking for small-scale discrepencies and inconsistencies within the datasets.
 
@@ -179,13 +179,13 @@ Some common scenarios where you might use OpenRefine include:
 
 #### Installing and Loading Data in OpenRefine
 
-6- Navigate to https://openrefine.org/download.html and download the appropriate version for your OS.
-- Windows: https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-win-with-java-3.4.1.zip
-- Mac: https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-mac-3.4.1.dmg
-- Google Chromebook: https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-linux-3.4.1.tar.gz
+6- Navigate to https://openrefine.org/download.html in a web browser and download the appropriate version for your OS.
+- [Windows](https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-win-with-java-3.4.1.zip)
+- [Mac](https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-mac-3.4.1.dmg)
+- [Google Chromebook](https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-linux-3.4.1.tar.gz)
   * If you are getting memory-related error messages, visit https://github.com/OpenRefine/OpenRefine/wiki/FAQ%3A-Allocate-More-Memory#linux-or-mac to troubleshoot.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_a.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_1.png?raw=true" alt="Capture_2"  /></p>
 
 7- Launch OpenRefine.
 
@@ -197,7 +197,7 @@ Some common scenarios where you might use OpenRefine include:
 
 11- Click `Next.`
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_1.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_2.png?raw=true" alt="Capture_2"  /></p>
 
 12- You now have a variety of configuration options before creating your project in OpenRefine.
 
@@ -213,7 +213,7 @@ Some common scenarios where you might use OpenRefine include:
 
 #### OpenRefine's Layout
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_2.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_3.png?raw=true" alt="Capture_2"  /></p>
 
 As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
 
@@ -239,13 +239,13 @@ You can include multiple values from the facet in a filter at one time by using 
 
 You can also invert the filter to show all records which do not match your selected values. This option appears at the top of the Facet panel when you select a value from the facet to apply as a filter."</em>
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_3.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_4.png?raw=true" alt="Capture_2"  /></p>
 
 18- Select the drop-down arrow for one of the columns that contains a pattern error.
 
 19- Select `Facet > Text Facet`. 
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_4.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_5.png?raw=true" alt="Capture_2"  /></p>
 
 20- The facet will now appear on the left-hand side of the page.
 
@@ -266,7 +266,7 @@ Consult the following resources as needed to understand this data:
 
 #### Exporting from OpenRefine
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_6.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_6.png?raw=true" alt="Capture_2"  /></p>
 
 25- Click on the `Export` button in the top right-hand corner and select the option to export your OpenRefine project as a CSV file. 
 
@@ -302,7 +302,7 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 31- Save the blank file as an Excel workbook.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_7.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_7.png?raw=true" alt="Capture_2"  /></p>
 
 32- Click on `Data` in the top menu bar.
 
@@ -310,7 +310,7 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 34- In `Sheet1`, select the `Player_Birthplaces.csv` file.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_8.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_8.png?raw=true" alt="Capture_2"  /></p>
 
 35- In the pop-up window, choose the `Delimited` option. Because we are importing a `csv` file, our fields are separated by a comma. In this case, the comma is our delimiter.
 
@@ -318,7 +318,7 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 37- Click `Next`.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_9.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_9.png?raw=true" alt="Capture_2"  /></p>
 
 38- In the next window (Step 2 of 3), select `Comma` as your delimiter. 
 
@@ -326,19 +326,19 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 40- Click `Next`.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_10.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_10.png?raw=true" alt="Capture_2"  /></p>
 
 41- In Step 3 of 3, select `General` for `Column data format`.
 
 42- Click `Finish`.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_11.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_11.png?raw=true" alt="Capture_2"  /></p>
 
 43- In the `Import Data` window, you can tell the program where to import the new data.
 
 44- Click `OK`.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_12.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_12.png?raw=true" alt="Capture_2"  /></p>
 
 45- You should now see the CSV data in the Excel workbook.
 
@@ -350,47 +350,47 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 #### Creating a Table
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_13.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_13.png?raw=true" alt="Capture_2"  /></p>
 
 49- Now we need to convert the sheets in our workbook to tables so we can search, sort, and filter.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_14.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_14.png?raw=true" alt="Capture_2"  /></p>
 
 50- Select all the cells that contain data.
 
 <blockquote>One shortcut is to select cell A1, then press Control Shift and the right arrow key to select all columns with data. Then Control Shift and the down arrow key to select all rows with data.</blockquote>
  
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_15.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_15.png?raw=true" alt="Capture_2"  /></p>
  
 51- Click `Insert` in the top menu bar.
  
 52- Select `Table` under `Insert` to insert a table.
  
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_16.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_16.png?raw=true" alt="Capture_2"  /></p>
  
 53- In the pop-up window, we have already selected the cells with data. `=$A$1:$I$3616` is an expression that selects selects column A through column I and row 1 through row 3616.
  
 54- Select the `My table has headers` option.
  
 55- Click `OK`.
- 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_17.png?raw=true" alt="Capture_2"  /></p>
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_17.png?raw=true" alt="Capture_2"  /></p>
  
 56- We have now converted the data in our sheet to a table.
 
 #### Editing Data
- 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_18.png?raw=true" alt="Capture_2"  /></p>
- 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_19.png?raw=true" alt="Capture_2"  /></p>
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_18.png?raw=true" alt="Capture_2"  /></p>
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_19.png?raw=true" alt="Capture_2"  /></p>
  
 57- Click the drop-down arrow next to a column header to see additional options for that field.
  
 58- Use these sort, search, and filter options to address data pattern errors.
- 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_20.png?raw=true" alt="Capture_2"  /></p>
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_21.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_20.png?raw=true" alt="Capture_2"  /></p>
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_21.png?raw=true" alt="Capture_2"  /></p>
  
 59- Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
  
@@ -409,7 +409,7 @@ Consult the following resources as needed to understand this data:
 
 61- We will save the combined CSV files as an Excel workbook to use later in this lab.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_22.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_22.png?raw=true" alt="Capture_2"  /></p>
 
 62- Click on the `File` menu section to show additional export options.
 
@@ -435,13 +435,9 @@ One option is use a survey with some pre-defined choices or drop-down options.
 
 NEED TO CHANGE TO GOOGLE FORM INSTRUCTIONS
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_23.png?raw=true" alt="Capture_2"  /></p>
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_24.png?raw=true" alt="Capture_2"  /></p>
-
 64- Log into your Grinnell OFfice 365 account.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_25.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_23.png?raw=true" alt="Capture_2"  /></p>
 
 65- Select the Microsoft Forms app.
 
@@ -455,13 +451,11 @@ NEED TO CHANGE TO GOOGLE FORM INSTRUCTIONS
 
 68- You can also use some of the built-in data validation options in Excel.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_26.png?raw=true" alt="Capture_2"  /></p>
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_27.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_24.png?raw=true" alt="Capture_2"  /></p>
 
 69- Under `Data`, select the `Data Validation` option.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/databases/blob/master/screenshots/Image_28.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_25.png?raw=true" alt="Capture_2"  /></p>
 
 70- In the pop-up window, you can limit the  types of values that will be valid in a particular field. 
 
@@ -470,3 +464,7 @@ NEED TO CHANGE TO GOOGLE FORM INSTRUCTIONS
 Visit Microsoft Office's ["Apply data validation to cells"](https://support.office.com/en-us/article/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) article to learn more about data validation options.
 
 <blockquote>Q11: Describe how you would go about using data validation to build a template for the <code>CSC_Database_Lab_PlayerBirthplaces.csv</code> file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.</blockquote>
+
+# Project Prompts
+
+# Lab Notebook Questions
