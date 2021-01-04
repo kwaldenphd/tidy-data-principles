@@ -5,6 +5,13 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 ## Lab Goals
 
+This lab provides an overview of tidy data principles (Wickham et al). It covers how to recognize and address pattern errors in structured data using the data cleaning tool Open Refine and common spreadsheet programs like Microsoft Excel. It also covers how to use survey design and data validation options to minimize user error in data entry.
+
+By the end of this lab, students will be able to: 
+- Understand the core components and principles of tidy data
+- Recognize pattern errors in structured datasets
+- Understand how to approach data cleaning and wrangling using OpenRefine and Microsoft Excel
+- Understand the affordances of survey design and data validation for minimizing user error
 
 ## Acknowledgements
 The author consulted the following resources when building this tutorial:
