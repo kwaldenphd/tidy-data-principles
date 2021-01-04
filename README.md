@@ -390,8 +390,6 @@ We are going to go through a process in Microsoft Excel where we load our indivi
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_20.png?raw=true" alt="Capture_2"  /></p>
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_21.png?raw=true" alt="Capture_2"  /></p>
- 
 59- Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
  
 Consult the following resources as needed to understand this data:
@@ -409,7 +407,7 @@ Consult the following resources as needed to understand this data:
 
 61- We will save the combined CSV files as an Excel workbook to use later in this lab.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_22.png?raw=true" alt="Capture_2"  /></p>
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_21.png?raw=true" alt="Capture_2"  /></p>
 
 62- Click on the `File` menu section to show additional export options.
 
@@ -435,13 +433,16 @@ One option is use a survey with some pre-defined choices or drop-down options.
 
 NEED TO CHANGE TO GOOGLE FORM INSTRUCTIONS
 
-64- Log into your Grinnell OFfice 365 account.
+64- Log into your Notre Dame Google Drive account.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_22.png?raw=true" alt="Capture_2"  /></p>
+
+65- Select the option to create a Google Form.
+
+66- Click on the `Blank Form` option.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_23.png?raw=true" alt="Capture_2"  /></p>
 
-65- Select the Microsoft Forms app.
-
-66- Click on the `New Form` option.
 
 67- Explore the different question types. 
 
