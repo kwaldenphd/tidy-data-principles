@@ -32,7 +32,6 @@ The author consulted the following resources when building this tutorial:
 - [Workflows for Data Entry](#workflows-for-data-entry)
   * [Survey Versus Spreadsheet](#survey-versus-spreadsheet)
   * [Data Validation](#data-validation)
-- [Additional Resources](#additional-resources)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
 # Data
