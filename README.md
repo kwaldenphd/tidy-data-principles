@@ -372,7 +372,9 @@ Double | Used to store precise numerical values that include decimal points | 3.
 
 74. There are two options for the next section of the lab- working in Google Sheets or Microsoft Excel. You are only expected to complete one of those options.
   * [Microsoft Excel](#microsoft-excel)
+    * Steps 76-95
   * [Google Sheets](#google-sheets)
+    * Steps 96-134
 
 75. For either option, the workflow covered in this section of the lab loads individual tables into a workbook and uses spreadsheet program tools to interact with and clean (or "tidy") the data.
 
@@ -655,6 +657,10 @@ Double | Used to store precise numerical values that include decimal points | 3.
 ## Data Validation
 
 155. You can also use some of the built-in data validation options in a spreadsheet program.
+  * [Microsoft Excel](#data-validation-in-excel)
+    * Steps 156-159
+  * [Google Sheets](#data-validation-in-google-sheets)
+    * Steps 160-164
 
 ### Data Validation in Excel
 
