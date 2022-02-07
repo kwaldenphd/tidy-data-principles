@@ -40,7 +40,7 @@ The author consulted the following resources when building this tutorial:
 
 # Lab Notebook Template
 
-[Link to lab notebook template (Google Doc)]()
+[Link to lab notebook template (Google Doc)](https://docs.google.com/document/d/1ccLZghZq-CpNc-iGTHp2XnEAfSKkLKALLZTyCYIeoP8/copy)
 - Screenshots (as needed) are HIGHLY RECOMMENDED.
   * Windows ([Snipping Tool](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) for folks running older versions of Windows; [Snip & Sketch](https://www.lifewire.com/snip-and-sketch-windows-10-4774799) for folks running updated versions)
   * [Mac](https://support.apple.com/en-us/HT201361)
@@ -697,6 +697,13 @@ Double | Used to store precise numerical values that include decimal points | 3.
 <blockquote>Q11: Describe how you would go about using data validation to build a template for the <code>player_birthplaces.csv</code> file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.</blockquote>
 
 # Lab Notebook Questions
+
+[Link to lab notebook template (Google Doc)](https://docs.google.com/document/d/1ccLZghZq-CpNc-iGTHp2XnEAfSKkLKALLZTyCYIeoP8/copy)
+- Screenshots (as needed) are HIGHLY RECOMMENDED.
+  * Windows ([Snipping Tool](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) for folks running older versions of Windows; [Snip & Sketch](https://www.lifewire.com/snip-and-sketch-windows-10-4774799) for folks running updated versions)
+  * [Mac](https://support.apple.com/en-us/HT201361)
+  * [Google Chromebook](https://support.google.com/chromebook/answer/10474268?hl=en)
+- [Tutorial for adding images/tables/drawings to a Google Doc](https://www.techrepublic.com/article/how-to-add-images-tables-and-drawings-to-a-google-doc-file/)
 
 Q1: What questions do you have about these principles? Which ones are unclear are confusing?
 
