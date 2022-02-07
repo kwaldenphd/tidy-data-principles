@@ -193,7 +193,7 @@ Article abstract:
 
 26. Explore the three tables (sheets/tabs in the combined workbook or separate `.csv` files), thinking about the types of information included or represented in different tables and fields
 
-<blockquote>Q2: Explore both files, thinking about What fields are represented in these datasets? Describe the data fields in your own words.</blockquote>
+<blockquote>Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words.</blockquote>
 
 Type | Description | Example
 --- | --- | ---
@@ -698,13 +698,13 @@ Double | Used to store precise numerical values that include decimal points | 3.
   * [Google Chromebook](https://support.google.com/chromebook/answer/10474268?hl=en)
 - [Tutorial for adding images/tables/drawings to a Google Doc](https://www.techrepublic.com/article/how-to-add-images-tables-and-drawings-to-a-google-doc-file/)
 
-Q1: What questions do you have about these principles? Which ones are unclear are confusing?
+Q1: What questions do you have about these principles? Which ones are unclear or confusing?
 
-Q2: What fields are represented in these datasets? Describe the data fields in your own words.
+Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words
 
 Q3: Provide 3 distinct examples from the sample datasets that do not conform to tidy data principles. Include the example as well as an explanation.
 
-Q4: Discuss with a colleague what issues you are seeing in these datasetes. What commonalities or patterns are you seeing?
+Q4: Discuss with a colleague what issues you are seeing in these datasets. What commonalities or patterns are you seeing?
 
 Q5: How would you address these pattern errors so the data conforms to tidy data principles? Explain what steps you would take to address at least 3 pattern errors. Each error explanation should include three parts:
 <ol type="a">
