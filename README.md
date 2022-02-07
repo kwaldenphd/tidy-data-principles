@@ -5,13 +5,13 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 ## Lab Goals
 
-This lab provides an overview of tidy data principles (Wickham et al). It covers how to recognize and address pattern errors in structured data using the data cleaning tool Open Refine and common spreadsheet programs like Microsoft Excel. It also covers how to use survey design and data validation options to minimize user error in data entry.
+This lab provides an overview of tidy data principles (Wickham et al). It covers how to recognize and address pattern errors in structured data using the data cleaning tool Open Refine and common spreadsheet programs like Microsoft Excel or Google Sheets. It also covers how to use survey design and data validation options to minimize user error in data entry.
 
-By the end of this lab, students will be able to: 
+By the end of this lab, students will be able to:
 - Understand the core components and principles of tidy data
 - Recognize pattern errors in structured datasets
-- Understand how to approach data cleaning and wrangling using OpenRefine and Microsoft Excel
-- Understand the affordances of survey design and data validation for minimizing user error
+- Understand how to approach data cleaning and wrangling using OpenRefine and spreadsheet programs
+- Understand the affordances of survey design and data validation as part of data entry/wrangling workflows
 
 ## Acknowledgements
 The author consulted the following resources when building this tutorial:
@@ -21,7 +21,9 @@ The author consulted the following resources when building this tutorial:
 
 # Table of Contents
 
+- [Lab Notebook Template](#lab-notebook-template)
 - [Data](#data)
+- [Tools](#tools)
 - [Tidy Data Principles](#tidy-data-principles)
   * [What Are the Principles](#what-are-the-principles)
   * [Common Spreadsheet Errors](#common-spreadsheet-errors)
@@ -29,34 +31,71 @@ The author consulted the following resources when building this tutorial:
     * [Identify Patterns and Brainstorm Solutions](#identify-patterns-and-brainstorm-solutions)
     * [Data Wrangling Using OpenRefine](#data-wrangling-using-openrefine)
     * [Data Wrangling Using a Spreadsheet Program](#data-wrangling-using-a-spreadsheet-program)
+      * [Microsoft Excel](#microsoft-excel)
+	  * [Google Sheets](#google-sheets)
 - [Workflows for Data Entry](#workflows-for-data-entry)
   * [Survey Versus Spreadsheet](#survey-versus-spreadsheet)
   * [Data Validation](#data-validation)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
+# Lab Notebook Template
+
+[Link to lab notebook template (Google Doc)]()
+- Screenshots (as needed) are HIGHLY RECOMMENDED.
+  * Windows ([Snipping Tool](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) for folks running older versions of Windows; [Snip & Sketch](https://www.lifewire.com/snip-and-sketch-windows-10-4774799) for folks running updated versions)
+  * [Mac](https://support.apple.com/en-us/HT201361)
+  * [Google Chromebook](https://support.google.com/chromebook/answer/10474268?hl=en)
+- [Tutorial for adding images/tables/drawings to a Google Doc](https://www.techrepublic.com/article/how-to-add-images-tables-and-drawings-to-a-google-doc-file/)
+
 # Data
 
-1. The following data files are used in this tutorial:
-- `Tidy_Data_Lab_Combined_Workbook.xlsx`
-- `Tidy_Data_Lab_Player_Birthplaces.csv`
-- `Tidy_Data_Lab_Team_Locations.csv`
-- `Tidy_Data_Lab_Combined_Transactions.csv`
+The following data files are used in this tutorial, with Google Drive links (ND users only) provided below:
+- [`Combined_Workbook.xlsx`](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/edit?usp=sharing)
+- [`Player_Birthplaces.csv`](https://drive.google.com/file/d/1Z2eCMvuMgbgZ1V1UGkRODYDkwBdtl564/view?usp=sharing)
+- [`Team_Locations.csv`](https://drive.google.com/file/d/1ORzrTd9Gz86scESFPb72rAdwagn9dxqr/view?usp=sharing)
 
-2. They can be downloaded as a `zip` folder in this GitHub repo.
+You can also download the four files in a compressed folder (`.zip`): [Google Drive link, ND users](https://drive.google.com/file/d/13VYKrh-ftTxRqB-zrHQM2okmV9nFhFq7/view?usp=sharing)
 
-3. [Link to access via Google Drive (ND users only)](https://drive.google.com/drive/folders/1pmK-MqJT7aEzOBAVNNtoV5VidCCc99T8?usp=sharing)
+# Tools
+
+We'll be opening some structured data files as part of our work in this lab. You can use a spreadsheet program or text editor to access these files.
+
+  * Text editors:
+    * [TextEdit (Mac)](https://support.apple.com/guide/textedit/welcome/mac)
+	* [Notepad](https://www.microsoft.com/en-us/p/windows-notepad/9msmlrh6lzf3) or [Notepad++](https://notepad-plus-plus.org/) (Windows)
+	* [Atom](https://atom.io/), [Brackets](https://brackets.io/) (free download options for Mac and Windows)
+	* [Text (Chromebook)](https://chrome.google.com/webstore/detail/text/mmfbcljfglbokpmkimbfghdkjmjhdgbg?hl=en)  * Spreadsheet programs:
+    * [Microsoft Excel (Windows or Mac)](https://nd.service-now.com/nd_portal?id=kb_article&sys_id=cf15b58edbaa3058310fa94ed3961935)
+	  * ND students have free access to the Microsoft Office suite through Office365
+	* [Apple Numbers (Mac)](https://www.apple.com/numbers/)
+	* [LibreCalc (open source Excel/Numbers alternative for Mac or Windows users)](https://www.libreoffice.org/download/download/)
+	* [Google Sheets (web-based option available through Google Drive)](https://www.google.com/sheets/about/)
+
+
+We'll also be working with a free software program called OpenRefine as part of our work in this lab.
+
+As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
+
+<blockquote><p>OpenRefine is described as 'a power tool for working with messy data' (<a href="http://web.archive.org/web/20141021040915/http://davidhuynh.net/spaces/nicar2011/tutorial.pdf">David Huynh</a>) - but what does this mean? It is probably easiest to describe the kinds of data OpenRefine is good at working with and the sorts of problems it can help you solve.</p>
+<br>
+<p>OpenRefine is most useful where you have data in a simple tabular format such as a spreadsheet, a comma separated values file (csv) or a tab delimited file (tsv) but with internal inconsistencies either in data formats, or where data appears, or in terminology used. OpenRefine can be used to standardize and clean data across your file.</p></blockquote>
+
+Navigate to https://openrefine.org/download.html in a web browser and download the appropriate version for your operating system.
+- If you are getting memory-related error messages, visit https://docs.openrefine.org/manual/installing#increasing-memory-allocation to troubleshoot.
 
 # Tidy Data Principles
 
 4. Hadley Wickham's 2014 article in the *Journal of Statistical Software* outlines the foundations and principles of tidy data. 
 
-5. Article abstract: "A huge amount of effort is spent cleaning data to get it ready for analysis, but there has been little research on how to make data cleaning as easy and effective as possible. This paper tackles a small, but important, component of data cleaning: data tidying. Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. This framework makes it easy to tidy messy datasets because only a small set of tools are needed to deal with a wide range of un-tidy datasets. This structure also makes it easier to develop tidy tools for data analysis, tools that both input and output tidy datasets. The advantages of a consistent data structure and matching tools are demonstrated with a case study free from mundane data manipulation chores." (Hadley Wickham, Tidy Data, Vol. 59, Issue 10, Sep 2014, Journal of Statistical Software. http://www.jstatsoft.org/v59/i10.)
+5. Article abstract: 
+* <em>"A huge amount of effort is spent cleaning data to get it ready for analysis, but there has been little research on how to make data cleaning as easy and effective as possible. This paper tackles a small, but important, component of data cleaning: data tidying. Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. This framework makes it easy to tidy messy datasets because only a small set of tools are needed to deal with a wide range of un-tidy datasets. This structure also makes it easier to develop tidy tools for data analysis, tools that both input and output tidy datasets. The advantages of a consistent data structure and matching tools are demonstrated with a case study free from mundane data manipulation chores." (Hadley Wickham, Tidy Data, Vol. 59, Issue 10, Sep 2014, Journal of Statistical Software. http://www.jstatsoft.org/v59/i10.)</em>
 
 6. Wickham's tidy data principles have become widely used in data science and other statistical software applications. 
 
 7. To prepare for this lab, we read Karl W. Broman and Kara H. Woo's 2018 "Data Organization in Spreadsheets" from *The American Statistician*. 
 
-8. Article abstract: "Spreadsheets are widely used software tools for data entry, storage, analysis, and visualization. Focusing on the data entry and storage aspects, this article offers practical recommendations for organizing spreadsheet data to reduce errors and ease later analyses. The basic principles are: be consistent, write dates like YYYY-MM-DD, do not leave any cells empty, put just one thing in a cell, organize the data as a single rectangle (with subjects as rows and variables as columns, and with a single header row), create a data dictionary, do not include calculations in the raw data files, do not use font color or highlighting as data, choose good names for things, make backups, use data validation to avoid data entry errors, and save the data in plain text files." ( Karl W. Broman & Kara H. Woo (2018) Data Organization in Spreadsheets, The American Statistician, 72:1, 2-10, DOI: 10.1080/00031305.2017.1375989)
+8. Article abstract: 
+* <em>"Spreadsheets are widely used software tools for data entry, storage, analysis, and visualization. Focusing on the data entry and storage aspects, this article offers practical recommendations for organizing spreadsheet data to reduce errors and ease later analyses. The basic principles are: be consistent, write dates like YYYY-MM-DD, do not leave any cells empty, put just one thing in a cell, organize the data as a single rectangle (with subjects as rows and variables as columns, and with a single header row), create a data dictionary, do not include calculations in the raw data files, do not use font color or highlighting as data, choose good names for things, make backups, use data validation to avoid data entry errors, and save the data in plain text files." (Karl W. Broman & Kara H. Woo (2018) Data Organization in Spreadsheets, The American Statistician, 72:1, 2-10, DOI: 10.1080/00031305.2017.1375989)</em>
 
 ## What Are the Principles
 
@@ -112,7 +151,9 @@ The author consulted the following resources when building this tutorial:
 21. Save a Copy of the Data in Plain Text Files
   * File formats can include comma-separated values (CSV) or plain-text (TXT)
   
-22. The principles are also available as a PDF in this repo.
+22. The principles are also available as a PDF:
+  * [GitHub](https://github.com/kwaldenphd/tidy-data-principles/blob/main/QualData_TidyData_Principles.pdf)
+  * [Google Drive](https://drive.google.com/file/d/1lUvFePf00JfU5jMLa9zuiCcadCiFKJcR/view?usp=sharing)
 
 ## Common Spreadsheet Errors
 
@@ -131,17 +172,35 @@ The author consulted the following resources when building this tutorial:
 - Inclusion of metadata in data table
 - Date formatting
 
-<blockquote>Q1: What questions do you have about these principles? Which ones are unclear are confusing?</blockquote>
+<blockquote>Q1: What questions do you have about these principles? Which ones are unclear or confusing?</blockquote>
  
-## Dealing With Messy Data
+# Dealing With Messy Data
 
-24. Extract the contents of the `tidy_data_lab_data.zip` folder. 
+24. Double check that you have the needed data files for this lab.
 
-25. Open the `Tidy_Data_Lab_Player_Birthplaces.csv` and `Tidy_Data_Lab_Team_Locations.csv` files in a spreadsheet program.
+- [`Combined_Workbook.xlsx`](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/edit?usp=sharing)
+- [`Player_Birthplaces.csv`](https://drive.google.com/file/d/1Z2eCMvuMgbgZ1V1UGkRODYDkwBdtl564/view?usp=sharing)
+- [`Team_Locations.csv`](https://drive.google.com/file/d/1ORzrTd9Gz86scESFPb72rAdwagn9dxqr/view?usp=sharing)
 
-26. Explore both files.
+25. You can also download the four files in a compressed folder (`.zip`): [Google Drive link, ND users](https://drive.google.com/file/d/13VYKrh-ftTxRqB-zrHQM2okmV9nFhFq7/view?usp=sharing)
 
-<blockquote>Q2: What fields are represented in these datasets? Describe the data fields in your own words. Use the language of string, double, and integer to describe the data fields.</blockquote>
+26. Open the the `Combined_Workbook` file in a spreadsheet program (you can also open the three `.csv` files in a spreadsheet program or text editor).
+
+  * Text editors:
+    * [TextEdit (Mac)](https://support.apple.com/guide/textedit/welcome/mac)
+    * [Notepad](https://www.microsoft.com/en-us/p/windows-notepad/9msmlrh6lzf3) or [Notepad++](https://notepad-plus-plus.org/) (Windows)
+    * [Atom](https://atom.io/), [Brackets](https://brackets.io/) (free download options for Mac and Windows)
+    * [Text (Chromebook)](https://chrome.google.com/webstore/detail/text/mmfbcljfglbokpmkimbfghdkjmjhdgbg?hl=en)  
+* Spreadsheet programs:
+    * [Microsoft Excel (Windows or Mac)](https://nd.service-now.com/nd_portal?id=kb_article&sys_id=cf15b58edbaa3058310fa94ed3961935)
+      * ND students have free access to the Microsoft Office suite through Office365
+    * [Apple Numbers (Mac)](https://www.apple.com/numbers/)
+    * [LibreCalc (open source Excel/Numbers alternative for Mac or Windows users)](https://www.libreoffice.org/download/download/)
+    * [Google Sheets (web-based option available through Google Drive)](https://www.google.com/sheets/about/)
+
+26. Explore the three tables (sheets/tabs in the combined workbook or separate `.csv` files), thinking about the types of information included or represented in different tables and fields
+
+<blockquote>Q2: Explore both files, thinking about What fields are represented in these datasets? Describe the data fields in your own words.</blockquote>
 
 Type | Description | Example
 --- | --- | ---
@@ -149,45 +208,57 @@ String | Used to store text or a string of non-integer characters | "This classr
 Integer | Used to store positive or negative whole numbers | -25, 0, 25
 Double | Used to store precise numerical values that include decimal points | 3.14159265359
  
-### Identify Patterns and Brainstorm Solutions
+## Identify Patterns and Brainstorm Solutions
 
-27. Compare what you see in the `Tidy_Data_Lab_Player_Birthplaces.csv` and `Tidy_Data_Lab_Team_Locations.csv` files to the tidy data principles outlined above.
+27. Compare what you see in these tables to the tidy data principles outlined above.
 
 28. Start by looking for small-scale discrepencies and inconsistencies within the datasets.
 
-<blockquote>Q3: Provide 3 distinct examples from the sample datasets that do not conform to tidy data principles. Include the example as well as an explanation.</blockquote>
+<blockquote>Q3: Provide three (3) distinct examples from the sample datasets that do not conform to tidy data principles. Include the example as well as an explanation of how this example does not conform to tidy data principles.</blockquote>
 
-<blockquote>Q4: Discuss with a colleague what issues you are seeing in these datasetes. What commonalities or patterns are you seeing?</blockquote>
+<blockquote>Q4: Take a step back and consider the pattern errors you're seeing in these datasets. What trends do you notice? Any thoughts or ideas as to how or why these pattern errors might have occurred?</blockquote>
 
-<blockquote>Q5: How would you address these pattern errors so the data conforms to tidy data principles? Describe what steps you would take to address at least 3 pattern errors. For each error, include the following elements: an example of the error, an explanation of your method to address the error, and the same example as tidy data.</blockquote>
+<blockquote>Q5: How would you address these pattern errors so the data conforms to tidy data principles? Explain what steps you would take to address at least 3 pattern errors. Each error explanation should include three parts:
+<ol type="a">
+<li>an example of the error</li>
+<li>an explanation of your method to address the error</li>
+<li>the same example as tidy data</li>
+</ol>
+</blockquote>
 
-### Data Wrangling Using OpenRefine
+# Data Wrangling Using OpenRefine
 
 29. As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
 
-<em>OpenRefine is described as 'a power tool for working with messy data' ([David Huynh](http://web.archive.org/web/20141021040915/http://davidhuynh.net/spaces/nicar2011/tutorial.pdf)) - but what does this mean? It is probably easiest to describe the kinds of data OpenRefine is good at working with and the sorts of problems it can help you solve.
+<blockquote><p>30. OpenRefine is described as 'a power tool for working with messy data' (<a href="http://web.archive.org/web/20141021040915/http://davidhuynh.net/spaces/nicar2011/tutorial.pdf">David Huynh</a>) - but what does this mean? It is probably easiest to describe the kinds of data OpenRefine is good at working with and the sorts of problems it can help you solve.</p>
+<br>
+<p>31. OpenRefine is most useful where you have data in a simple tabular format such as a spreadsheet, a comma separated values file (csv) or a tab delimited file (tsv) but with internal inconsistencies either in data formats, or where data appears, or in terminology used. OpenRefine can be used to standardize and clean data across your file.</p></blockquote>
 
-30. OpenRefine is most useful where you have data in a simple tabular format such as a spreadsheet, a comma separated values file (csv) or a tab delimited file (tsv) but with internal inconsistencies either in data formats, or where data appears, or in terminology used. OpenRefine can be used to standardize and clean data across your file. 
+<blockquote>
+32. It can help you:
+<ul>
+<li>Get an overview of a data set</li>
+<li>Resolve inconsistencies in a data set, for example standardizing date formatting</li>
+<li>Help you split data up into more granular parts, for example splitting up cells with multiple authors into separate cells</li>
+<li>Match local data up to other data sets, for example in matching local subjects against the Library of Congress Subject Headings</li>
+<li>Enhance a data set with data from other sources</li>
+</ul>
+</blockquote>
 
-31. It can help you:
-- Get an overview of a data set
-- Resolve inconsistencies in a data set, for example standardizing date formatting
-- Help you split data up into more granular parts, for example splitting up cells with multiple authors into separate cells
-- Match local data up to other data sets, for example in matching local subjects against the Library of Congress Subject Headings
-- Enhance a data set with data from other sources
+<blockquote>
+33. Some common scenarios where you might use OpenRefine include:
+<ul><li>Where you want to know how many times a particular value (name, publisher, subject) appears in a column in your data</li>
+<li>Where you want to know how values are distributed across your whole data set</li>
+<li>Where you have a list of dates which are formatted in different ways, and want to change all the dates in the list to a single common date format."</li></ul>
+</blockquote>
 
-32. Some common scenarios where you might use OpenRefine include:
-- Where you want to know how many times a particular value (name, publisher, subject) appears in a column in your data
-- Where you want to know how values are distributed across your whole data set
-- Where you have a list of dates which are formatted in different ways, and want to change all the dates in the list to a single common date format."</em>
+## Installing and Loading Data in OpenRefine
 
-#### Installing and Loading Data in OpenRefine
+34. We'll also be working with a free software program called OpenRefine as part of our work in this lab.
 
-36. Navigate to https://openrefine.org/download.html in a web browser and download the appropriate version for your OS.
-- [Windows](https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-win-with-java-3.4.1.zip)
-- [Mac](https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-mac-3.4.1.dmg)
-- [Google Chromebook](https://github.com/OpenRefine/OpenRefine/releases/download/3.4.1/openrefine-linux-3.4.1.tar.gz)
-  * If you are getting memory-related error messages, visit https://github.com/OpenRefine/OpenRefine/wiki/FAQ%3A-Allocate-More-Memory#linux-or-mac to troubleshoot.
+35. Navigate to https://openrefine.org/download.html in a web browser and download the appropriate version for your operating system.
+
+36. If you are getting memory-related error messages, visit https://docs.openrefine.org/manual/installing#increasing-memory-allocation to troubleshoot.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_1.png?raw=true" alt="Capture_2"  /></p>
 
@@ -201,13 +272,15 @@ Double | Used to store precise numerical values that include decimal points | 3.
 
 41. Click `Next.`
 
-42.align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_2.png?raw=true" alt="Capture_2"  /></p>
+<img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_2.png?raw=true" alt="Capture_2"  /></p>
 
-43. You now have a variety of configuration options before creating your project in OpenRefine.
+42. You now have a variety of configuration options before creating your project in OpenRefine.
 
-44. Select an appropriate character encoding schema.
+43. Select an appropriate character encoding schema.
 
-45. Select the option to `Parse next 1 line(s) as column headers.` This option treats the first row of your file as a table header.
+44. Select the option to `Parse next 1 line(s) as column headers.` 
+
+45. This option treats the first row of your file as a table header.
 
 46. Check to be sure the `Parse cell text into numbers, dates, ...` option is NOT selected. 
 
@@ -215,33 +288,34 @@ Double | Used to store precise numerical values that include decimal points | 3.
 
 48. Click `Create Project >>` to begin to work with your data as an OpenRefine project. 
 
-#### OpenRefine's Layout
+## OpenRefine's Layout
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_3.png?raw=true" alt="Capture_2"  /></p>
 
 49. As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
 
-<em>"OpenRefine displays data in a tabular format. Each row will usually represent a ‘record’ in the data, while each column represents a type of information. This is very similar to how you might view data in a spreadsheet or database. As with a spreadsheet, the individual bits of data live in ‘cells’ at the intersection of a row and a column.
+<blockquote>
+<p>"OpenRefine displays data in a tabular format. Each row will usually represent a ‘record’ in the data, while each column represents a type of information. This is very similar to how you might view data in a spreadsheet or database. As with a spreadsheet, the individual bits of data live in ‘cells’ at the intersection of a row and a column.</p>
+<br>
+<p>50. OpenRefine only displays a limited number of rows of data at one time. You can adjust the number choosing between 5, 10 (the default), 25 and 50 at the top left of the table of data. You can navigate through the records by using the previous/next/first/last navigation options at the top right of the table of data."</p></blockquote>
 
-50. OpenRefine only displays a limited number of rows of data at one time. You can adjust the number choosing between 5, 10 (the default), 25 and 50 at the top left of the table of data. You can navigate through the records by using the previous/next/first/last navigation options at the top right of the table of data."</em>
-
-#### Faceting and Filtering
+## Faceting and Filtering
 
 51. As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
 
-<em>Facets are one of the most useful features of OpenRefine and can help in both getting an overview of the data and to improve the consistency of the data.
-
-52. A ‘Facet’ groups all the values that appear in a column, and then allows you to filter the data by these values and edit values across many records at the same time.
-
-53. The simplest type of Facet is called a ‘Text facet’. This simply groups all the text values in a column and lists each value with the number of records it appears in. The facet information always appears in the left hand panel in the OpenRefine interface.
-
-54. To create a Text Facet for a column, click on the drop down menu at the top of the publisher column and choose `Facet -> Text Facet`. The facet will then appear in the left hand panel.
-
-55. The facet consists of a list of values used in the data. You can filter the data displayed by clicking on one of these headings.
-
-56. You can include multiple values from the facet in a filter at one time by using the `Include` option which appears when you put your mouse over a value in the Facet.
-
-57. You can also invert the filter to show all records which do not match your selected values. This option appears at the top of the Facet panel when you select a value from the facet to apply as a filter."</em>
+<blockquote><p>"Facets are one of the most useful features of OpenRefine and can help in both getting an overview of the data and to improve the consistency of the data.</p>
+<br>
+<p>52. A ‘Facet’ groups all the values that appear in a column, and then allows you to filter the data by these values and edit values across many records at the same time.</p>
+<br>
+<p>53. The simplest type of Facet is called a ‘Text facet’. This simply groups all the text values in a column and lists each value with the number of records it appears in. The facet information always appears in the left hand panel in the OpenRefine interface.</p>
+<br>
+<p>54. To create a Text Facet for a column, click on the drop down menu at the top of the publisher column and choose `Facet -> Text Facet`. The facet will then appear in the left hand panel.</p>
+<br>
+<p>55. The facet consists of a list of values used in the data. You can filter the data displayed by clicking on one of these headings.</p>
+<br>
+<p>56. You can include multiple values from the facet in a filter at one time by using the `Include` option which appears when you put your mouse over a value in the Facet.</p>
+<br>
+<p>57. You can also invert the filter to show all records which do not match your selected values. This option appears at the top of the Facet panel when you select a value from the facet to apply as a filter."</p></blockquote>
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_4.png?raw=true" alt="Capture_2"  /></p>
 
@@ -268,7 +342,7 @@ Double | Used to store precise numerical values that include decimal points | 3.
 - [Wikipedia list of baseball team abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations)
 - [Wikipedia glossary of baseball jargon](https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball)
 
-#### Exporting from OpenRefine
+## Exporting from OpenRefine
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_6.png?raw=true" alt="Capture_2"  /></p>
 
@@ -282,215 +356,365 @@ Double | Used to store precise numerical values that include decimal points | 3.
 
 69. Check to see the pattern errors have been addressed.
 
-70. Go through this same process for the `CSC_Database_Lab_TeamLocations.csv` file.
+70. Go through this same process for the `Team_Locations.csv` file.
 
 <blockquote>Q6: Compare your experience working in OpenRefine to other experiences you have had in a text editor or spreadsheet program. In what ways do you understand, perceive, or relate to the data differently through working in OpenRefine? Describe your experience cleaning this data in OpenRefine.</blockquote>
 
 71. We are barely scratching the surface of what is possible with data wrangling in OpenRefine. The progam can also standardize capitalization, remove leading and trailing spaces, and address other commonly-found data errors. [Library Carpentry's OpenRefine tutorial](https://librarycarpentry.org/lc-open-refine/) goes in to greater detail about many of these other functions.
  
-### Data Wrangling Using A Spreadsheet Program
+# Data Wrangling Using A Spreadsheet Program
 
 72. Spreadsheet software programs are another commonly-used tool for interacting with structured data. Some spreadsheet programs like Microsoft Office's Excel or Apple's Numbers are proprietary software installed on a local computer. Other proprietary spreadsheet programs like Google Sheets run online and are not installed locally.
 
 73. Open-source spreadsheet programs include OpenOffice's Calc and LibreOffice's Calc. 
 
-74. This tutorial works with Microsoft Excel, but the steps outlined are also possible using Google Sheets.
-
 <blockquote>Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What was your overall feeling about working with data in a spreadsheet program?</blockquote>
 
-75. We are going to go through a process in Microsoft Excel where we load our individual CSV files into a multi-sheet workbook file. Then we will use some of Excel's built-in table functionality to clean the data.
+74. There are two options for the next section of the lab- working in Google Sheets or Microsoft Excel. You are only expected to complete one of those options.
+  * [Microsoft Excel](#microsoft-excel)
+  * [Google Sheets](#google-sheets)
 
-#### Loading CSV Files into Excel
+75. For either option, the workflow covered in this section of the lab loads individual tables into a workbook and uses spreadsheet program tools to interact with and clean (or "tidy") the data.
 
-76. Open a blank Microsoft Excel file.
+## Microsoft Excel
 
-77. Save the blank file as an Excel workbook.
+### Loading Data
+
+76. There are two options for loading data files in Excel.
+  * Import CSV files
+  * Open Excel workbook
+
+#### Loading Data From CSV Files
+
+77. Open a blank Microsoft Excel file.
+
+78. Save the blank file as an Excel workbook.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_7.png?raw=true" alt="Capture_2"  /></p>
 
-78. Click on `Data` in the top menu bar.
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figA.jpg?raw=true" alt="Capture_2"  /></p>
 
-79. Under `Get External Data` select the `From Text` option.
+79. Click on `Data` in the top menu bar.
 
-80. In `Sheet1`, select the `Player_Birthplaces.csv` file.
+78. Under `Get Data` select the `From Text/CSV` option.
 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_8.png?raw=true" alt="Capture_2"  /></p>
+79. In `Sheet1`, select the `Player_Birthplaces.csv` file.
 
-81. In the pop-up window, choose the `Delimited` option. Because we are importing a `csv` file, our fields are separated by a comma. In this case, the comma is our delimiter.
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figB.jpg?raw=true" alt="Capture_2"  /></p>
 
-82. Select the `My data has headers.` option.
+80. In the pop-up window, make sure `Comma` is selected as the delimiter, and switch `File Origin` to `UTF-8`.
 
-83. Click `Next`.
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_9.png?raw=true" alt="Capture_2"  /></p>
-
-84. In the next window (Step 2 of 3), select `Comma` as your delimiter. 
-
-85. Check the `Data preview` window.
-
-86. Click `Next`.
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_10.png?raw=true" alt="Capture_2"  /></p>
-
-87. In Step 3 of 3, select `General` for `Column data format`.
-
-88. Click `Finish`.
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_11.png?raw=true" alt="Capture_2"  /></p>
-
-89. In the `Import Data` window, you can tell the program where to import the new data.
-
-90. Click `OK`.
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_12.png?raw=true" alt="Capture_2"  /></p>
-
-91. You should now see the CSV data in the Excel workbook.
-
-92. Rename `Sheet1` so you know what data is included in that sheet.
-
-93. Go through the same process for the `CSC_Database_Lab_TeamLocations.csv` file.
-
-94. Save the updated workbook.
-
-#### Creating a Table
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_13.png?raw=true" alt="Capture_2"  /></p>
-
-95. Now we need to convert the sheets in our workbook to tables so we can search, sort, and filter.
-
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_14.png?raw=true" alt="Capture_2"  /></p>
-
-96. Select all the cells that contain data.
-
-<blockquote>One shortcut is to select cell A1, then press Control Shift and the right arrow key to select all columns with data. Then Control Shift and the down arrow key to select all rows with data.</blockquote>
- 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_15.png?raw=true" alt="Capture_2"  /></p>
- 
-97. Click `Insert` in the top menu bar.
- 
-98. Select `Table` under `Insert` to insert a table.
- 
-<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_16.png?raw=true" alt="Capture_2"  /></p>
- 
-99. In the pop-up window, we have already selected the cells with data. `=$A$1:$I$3616` is an expression that selects selects column A through column I and row 1 through row 3616.
- 
-100. Select the `My table has headers` option.
- 
-101. Click `OK`.
+81. Click `Load`
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_17.png?raw=true" alt="Capture_2"  /></p>
- 
-102. We have now converted the data in our sheet to a table.
 
-#### Editing Data
+82. You should now see the CSV data in the Excel workbook.
+
+83. Go through the same process for the `team_locations.csv` file.
+
+84. Save the updated workbook.
+
+#### Loading Data as an Excel Workbook
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figC.jpg?raw=true" alt="Capture_2"  /></p>
+
+85. Alternatively, you can download the Google Sheets file as an Excel workbook (`.xlsx`).
+
+86. That workbook file includes both tables needed for this lab.
+
+### Data Cleaning in Excel
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_18.png?raw=true" alt="Capture_2"  /></p>
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_19.png?raw=true" alt="Capture_2"  /></p>
  
-103. Click the drop-down arrow next to a column header to see additional options for that field.
+87. Click the drop-down arrow next to a column header to see additional options for that field.
  
-104. Use these sort, search, and filter options to address data pattern errors.
+88. Use these sort, search, and filter options to address data pattern errors.
+
+#### Find and Replace
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_20.png?raw=true" alt="Capture_2"  /></p>
 
-105. Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
+89. Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figAA.jpg?raw=true" alt="Capture_2"  /></p>
+
+90. Click the `Options` button to see additional options.
  
-106. Consult the following resources as needed to understand this data:
+91. Consult the following resources as needed to understand this data:
 - [ISO 3166 country code table (Wikipedia)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table)
 - [United Nations geographic regions](https://unstats.un.org/unsd/methodology/m49/)
 - [USPS list of state abbreviations](https://about.usps.com/who-we-are/postal-history/state-abbreviations.htm)
 - [Wikipedia list of baseball team abbreviations](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations)
 - [Wikipedia glossary of baseball jargon](https://en.wiktionary.org/wiki/Appendix:Glossary_of_baseball)
 
-<blockquote>To change all cells in a column, click the cell in the first non-header row. Press <Control> and the down arrow key to select all cells with data in that column. Press <Control> and <D> to copy the first value into the other selected cells. Alternatively, move your cursor over the bottom right-hand corner of the cell in the first non-header row. Click and drag the plus icon that appears down through the column to copy the value in the first cell into the subsequent cells.</blockquote>
+<blockquote>To change all cells in a column, click the cell in the first non-header row. Press <code>Control</code> or <code>Command</code> and the down arrow key to select all cells with data in that column. Press <code>Control/Command</code> and <code>D</code> to copy the first value into the other selected cells. Alternatively, move your cursor over the bottom right-hand corner of the cell in the first non-header row. Click and drag the plus icon that appears down through the column to copy the value in the first cell into the subsequent cells.</blockquote>
 
-107. Go through this same process for the second sheet with data from the `Team_Locations` CSV file. 
+92. Go through this same process for the `team_locations` table.
 
-#### Options for Saving Your Work
+### Saving and Exporting in Excel
 
-108. We will save the combined CSV files as an Excel workbook to use later in this lab.
+93. The default file type in Microsoft Excel is an Excel workbook (`.xlsx`).
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_21.png?raw=true" alt="Capture_2"  /></p>
 
-108. Click on the `File` menu section to show additional export options.
+94. Click on the `File` menu section to show additional export options.
 
-109. Under `Export` you can see some of the other options for exporting the data in Excel.
+95. Under `Export` you can see some of the other options for exporting the data in Excel.
+  * While plain-text formats (tab separated values, `tsv`; comma separated values, `csv`, etc) are best for digital preservation and interoperability, they only accept a single table.
 
-<blockquote>Note: While CSV files are best for digital preservation and interoperability, they only support a single sheet of data.</blockquote>
+## Google Sheets
 
-<blockquote>Q8: Compare your experience working in Excel to your experience working in OpenRefine. In what ways do you understand, perceive, or relate to the data differently through working in Excel? Describe your experience cleaning this data in Excel.</blockquote>
+### Loading Data
 
-110. We are barely scratching the surface of what is possible with data wrangling in Excel (or other spreadsheet programs). The progam can also standardize capitalization, remove leading and trailing spaces, and address other commonly-found data errors. [Library Carpentry's Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/) goes in to greater detail about many of these other functions.
+96. There are two options for loading data files in Google Sheets.
+  * Import CSV files
+  * [Copy Google Sheets project](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/edit?usp=sharing)
+
+#### Loading Data From CSV Files
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figD.jpg?raw=true" alt="Capture_2"  /></p>
+
+97. Open a blank Google Sheets project.
+
+98. Replace `Untitled spreadsheet` in the top-left hand corner with a meaningful file name.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figE.jpg?raw=true" alt="Capture_2"  /></p>
+
+99. Select `Import` under `File` in the top-level menu.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figF.jpg?raw=true" alt="Capture_2"  /></p>
+
+100. Select the option to `Upload` a file from your local computer, or drag and drop the `player_birthplaces.csv` file.
+
+101. Click `Select`.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figG.jpg?raw=true" alt="Capture_2"  /></p>
+
+102. A few settings to check before we import:
+  * Change the `Import Location` to `Insert new sheet(s)`
+  * Select `Comma` as the `Separator type`
+  * Uncheck the `Convert text to numbers, dates, and formulas` box
+  
+103. Click `Import data`.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figH.jpg?raw=true" alt="Capture_2"  /></p>
+
+104. The `player_birthplaces` table is now loaded in Google Sheets.
+
+105. Go through the same workflow for the `team_locations.csv` file.
+
+#### Copying the Google Sheets Project
+
+106. Alternatively, you can make a copy of the Google Sheets project to your local Drive.
+
+107. The Google Sheets project includes both tables needed for this lab.
+
+### Data Cleaning in Google Sheets
+
+#### Freezing the Header Row
+
+108. The first thing we want to do is freeze the first row in the table, which has our column headers.
+
+109. This way when we start sorting specific columns, the column labels will not be affected.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figI.jpg?raw=true" alt="Capture_2"  /></p>
+
+110. Click `View` on the top-level menu, and select `Freeze`.
+
+111. Click `1 row` to freeze the first row in the table.
+
+#### Sorting
+
+112. Then, we can select a single column to sort by character or number values.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figJ.jpg?raw=true" alt="Capture_2"  /></p>
+
+113. Right click on a column label and select one of the `Sort sheet` options.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figK.jpg?raw=true" alt="Capture_2"  /></p>
+
+114. Or, click `Data` -> `Sort sheet` -> `Sort range` to sort by a particular column or selection.
+
+115. We can also sort by multiple columns.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figL.jpg?raw=true" alt="Capture_2"  /></p>
+
+116. Click `Data` -> `Sort range` -> `Advanced range sorting options` to access these options.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figM.jpg?raw=true" alt="Capture_2"  /></p>
+
+117. In the pop-up window, you can check the `Data has header row` box and then choose to sort by multiple columns.
+
+118. Click `Sort` to apply these settings.
+
+#### Filters
+
+119. We can also add filters to only see specific rows or values.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figN.jpg?raw=true" alt="Capture_2"  /></p>
+
+120. Click `Create a filter` under `Data`.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figO.jpg?raw=true" alt="Capture_2"  /></p>
+
+121. Now we can set up filters for individual columns in the table.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figP.jpg?raw=true" alt="Capture_2"  /></p>
+
+122. Click on the three horizontal lines next to a column label to open the filter menu.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figQ.jpg?raw=true" alt="Capture_2"  /></p>
+
+123. One option is to filter by condition.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figR.jpg?raw=true" alt="Capture_2"  /></p>
+
+124. Another option is to filter by values, which allows you to search for particular characters or select specific values.
+
+125. Click `OK` to apply the filter.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figS.jpg?raw=true" alt="Capture_2"  /></p>
+
+126. Google Sheets allows you to save particular filter settings/configurating as a `Filter view`.
+  * `Data` -> `Filter views` -> `Save as filter view`
+  
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figT.jpg?raw=true" alt="Capture_2"  /></p>
+
+127. You can also remove any filters from the Google Sheets project.
+  * `Data` -> `Remove filter`
+
+#### Find and Replace in Google Sheets
+
+128. Google Sheets also supports find and replace operations.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figX.jpg?raw=true" alt="Capture_2"  /></p>
+
+129. Click `Find and replace` under the `Edit` menu tab.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figY.jpg?raw=true" alt="Capture_2"  /></p>
+
+130. Google Sheets gives you options to match by case or for an entire cell's contents. You can also search using regular expressions.
+  * To learn more: ["Find and replace items using regular expressions,"](https://support.google.com/docs/answer/62754?p=spreadsheets_find_replace&visit_id=1644265064793-8550767213078292457&rd=1) Google Docs Support
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figZ.jpg?raw=true" alt="Capture_2"  /></p>
+
+131. Click on the `Search` drop-down menu to see additional options for searching in Google Sheets.
+
+### Saving and Exporting in Google Sheets
+
+132. Google Sheets projects are cloud-based- they are stored in the cloud and are accessible via Google Drive.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figU.jpg?raw=true" alt="Capture_2"  /></p>
+
+133. Click on the `File` - `Download` menu to show export options.
+
+134. Under `Download` you can see some of the other options for exporting the data.
+  * An Excel workbook (`.xlsx`) supports multiple tables or sheets in a single workbook file.
+  * Plain-text formats (tab separated values, `tsv`; comma separated values, `csv`, etc) are best for digital preservation and interoperability, but they only accept a single table.
+
+## Additional Resources and Next Steps
+
+<blockquote>Q8: Compare your experience working in a spreadsheet program (Excel or Google Sheets) to your experience working in OpenRefine. In what ways do you understand, perceive, or relate to the data differently through working in a spreadsheet program? Describe your experience cleaning this data in a spreadsheet program.</blockquote>
+
+135. We are barely scratching the surface of what is possible with data wrangling in Excel or Google Sheets.
+
+136. The progam can also standardize capitalization, remove leading and trailing spaces, and address other commonly-found data errors. 
+
+137. For more on Excel: [Library Carpentry's Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/) goes in to greater detail about many of these other functions.
+
+138. For more on Google Sheets: [10 Google Workspace tips to clean up data](https://support.google.com/a/users/answer/9604139?hl=en)
 
 # Workflows for Data Entry
 
 <blockquote>Q9: For the baseball datasets we have been working with in this lab, what do you think may have contributed to or caused the pattern errors we needed to address? How could these pattern errors be addressed in the data entry process?</blockquote>
 
-111. According to Library Carpentry's [Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/04-quality-control/index.html), "Quality assurance stops bad data from ever being entered by checking to see if values are valid during data entry. For example, if research is being conducted at sites A, B, and C, then the value V (which is right next to B on the keyboard) should never be entered. Likewise if one of the kinds of data being collected is a count, only integers greater than or equal to zero should be allowed."
+139. According to Library Carpentry's [Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/04-quality-control/index.html), "Quality assurance stops bad data from ever being entered by checking to see if values are valid during data entry. For example, if research is being conducted at sites A, B, and C, then the value V (which is right next to B on the keyboard) should never be entered. Likewise if one of the kinds of data being collected is a count, only integers greater than or equal to zero should be allowed."
 
-112. Building in quality assurance constraints into a data entry workflow can help minimize pattern errors that require later cleaning.
+140. Building in quality assurance constraints into a data entry workflow can help minimize pattern errors that require later cleaning.
 
 ## Survey Versus Spreadsheet
 
-113. One option is use a survey with some pre-defined choices or drop-down options.
+150. One option is use a survey with some pre-defined choices or drop-down options.
 
-114. Log into your Notre Dame Google Drive account.
+151. Log into your Notre Dame Google Drive account.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_22.png?raw=true" alt="Capture_2"  /></p>
 
-115. Select the option to create a Google Form.
+152. Select the option to create a Google Form.
 
-116. Click on the `Blank Form` option.
+153. Click on the `Blank Form` option.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_23.png?raw=true" alt="Capture_2"  /></p>
 
-117. Explore the different question types. 
+154. Explore the different question types. 
 
 <blockquote>Q10: Describe how you would go about building a survey form or template for the <code>Tidy_Data_Lab_PlayerBirthplaces.csv</code> file. You DO NOT need to actually create or submit a survey form. Describe what types of questions and pre-defined question or field options could you use to more effectively generate the data in this file.</blockquote>
 
 ## Data Validation
 
-118. You can also use some of the built-in data validation options in Excel.
+155. You can also use some of the built-in data validation options in a spreadsheet program.
+
+### Data Validation in Excel
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_24.png?raw=true" alt="Capture_2"  /></p>
 
-119. Under `Data`, select the `Data Validation` option.
+156. Under `Data`, select the `Data Validation` option.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_25.png?raw=true" alt="Capture_2"  /></p>
 
-120. In the pop-up window, you can limit the  types of values that will be valid in a particular field. 
+157. In the pop-up window, you can limit the  types of values that will be valid in a particular field. 
 
-121. You can also define a list of options or values which will show up as drop-down options for cells in that field.
+158. You can also define a list of options or values which will show up as drop-down options for cells in that field.
 
-122. Visit Microsoft Office's ["Apply data validation to cells"](https://support.office.com/en-us/article/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) article to learn more about data validation options.
+159. Visit Microsoft Office's ["Apply data validation to cells"](https://support.office.com/en-us/article/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) article to learn more about data validation options.
 
-<blockquote>Q11: Describe how you would go about using data validation to build a template for the <code>Tidy_Data_Lab_PlayerBirthplaces.csv</code> file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.</blockquote>
+### Data Validation in Google Sheets
 
-# Project Prompts
+160. Google Sheets also supports some data validation operations.
 
-No project prompts for this lab.
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figV.jpg?raw=true" alt="Capture_2"  /></p>
+
+161. Select `Data validation` under the `Data` menu tab.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figBB.jpg?raw=true" alt="Capture_2"  /></p>
+
+162. You can customize the cell range for specific validation settings.
+
+<p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figW.jpg?raw=true" alt="Capture_2"  /></p>
+
+163. The `Criteria` drop-down list includes as range of options for data validation settings.
+
+164. Visit Zapier's ["What is data validation in Google Sheets?"](https://zapier.com/blog/data-validation-google-sheets/) article to learn more about data validation options.
+
+<blockquote>Q11: Describe how you would go about using data validation to build a template for the <code>player_birthplaces.csv</code> file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.</blockquote>
 
 # Lab Notebook Questions
 
 Q1: What questions do you have about these principles? Which ones are unclear are confusing?
 
-Q2: What fields are represented in these datasets? Describe the data fields in your own words. Use the language of string, double, and integer to describe the data fields.
+Q2: What fields are represented in these datasets? Describe the data fields in your own words.
 
 Q3: Provide 3 distinct examples from the sample datasets that do not conform to tidy data principles. Include the example as well as an explanation.
 
 Q4: Discuss with a colleague what issues you are seeing in these datasetes. What commonalities or patterns are you seeing?
 
-Q5: How would you address these pattern errors so the data conforms to tidy data principles? Describe what steps you would take to address at least 3 pattern errors. For each error, include the following elements: an example of the error, an explanation of your method to address the error, and the same example as tidy data.
+Q5: How would you address these pattern errors so the data conforms to tidy data principles? Explain what steps you would take to address at least 3 pattern errors. Each error explanation should include three parts:
+<ol type="a">
+<li>an example of the error</li>
+<li>an explanation of your method to address the error</li>
+<li>the same example as tidy data</li>
+</ol>
 
 Q6: Compare your experience working in OpenRefine to other experiences you have had in a text editor or spreadsheet program. In what ways do you understand, perceive, or relate to the data differently through working in OpenRefine? Describe your experience cleaning this data in OpenRefine.
 
 Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What was your overall feeling about working with data in a spreadsheet program?
 
-Q8: Compare your experience working in Excel to your experience working in OpenRefine. In what ways do you understand, perceive, or relate to the data differently through working in Excel? Describe your experience cleaning this data in Excel.
+Q8: Compare your experience working in a spreadsheet program to your experience working in OpenRefine. In what ways do you understand, perceive, or relate to the data differently through working in Excel? Describe your experience cleaning this data in a spreadsheet program.
 
 Q9: For the baseball datasets we have been working with in this lab, what do you think may have contributed to or caused the pattern errors we needed to address? How could these pattern errors be addressed in the data entry process?
 
-Q10: Describe how you would go about building a survey form or template for the Tidy_Data_Lab_PlayerBirthplaces.csv file. You DO NOT need to actually create or submit a survey form. Describe what types of questions and pre-defined question or field options could you use to more effectively generate the data in this file.
+Q10: Describe how you would go about building a survey form or template for the `player_birthplaces.csv` file. You DO NOT need to actually create or submit a survey form. Describe what types of questions and pre-defined question or field options could you use to more effectively generate the data in this file.
 
-Q11: Describe how you would go about using data validation to build a template for the Tidy_Data_Lab_PlayerBirthplaces.csv file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.
+Q11: Describe how you would go about using data validation to build a template for the `player_birthplaces.csv` file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.
