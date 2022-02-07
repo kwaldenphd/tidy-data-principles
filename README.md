@@ -49,45 +49,38 @@ The author consulted the following resources when building this tutorial:
 
 # Data
 
-The following data files are used in this tutorial, with Google Drive links (ND users only) provided below:
+1. The following data files are used in this tutorial, with Google Drive links (ND users only) provided below:
 - [`Combined_Workbook.xlsx`](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/edit?usp=sharing)
 - [`Player_Birthplaces.csv`](https://drive.google.com/file/d/1Z2eCMvuMgbgZ1V1UGkRODYDkwBdtl564/view?usp=sharing)
 - [`Team_Locations.csv`](https://drive.google.com/file/d/1ORzrTd9Gz86scESFPb72rAdwagn9dxqr/view?usp=sharing)
 
-You can also download the four files in a compressed folder (`.zip`): [Google Drive link, ND users](https://drive.google.com/file/d/13VYKrh-ftTxRqB-zrHQM2okmV9nFhFq7/view?usp=sharing)
+2. You can also download the four files in a compressed folder (`.zip`): [Google Drive link, ND users](https://drive.google.com/file/d/13VYKrh-ftTxRqB-zrHQM2okmV9nFhFq7/view?usp=sharing)
 
 # Tools
 
-We'll be opening some structured data files as part of our work in this lab. You can use a spreadsheet program or text editor to access these files.
+3. We'll be opening some structured data files as part of our work in this lab. You can use a spreadsheet program or text editor to access these files.
 
   * Text editors:
     * [TextEdit (Mac)](https://support.apple.com/guide/textedit/welcome/mac)
-	* [Notepad](https://www.microsoft.com/en-us/p/windows-notepad/9msmlrh6lzf3) or [Notepad++](https://notepad-plus-plus.org/) (Windows)
-	* [Atom](https://atom.io/), [Brackets](https://brackets.io/) (free download options for Mac and Windows)
-	* [Text (Chromebook)](https://chrome.google.com/webstore/detail/text/mmfbcljfglbokpmkimbfghdkjmjhdgbg?hl=en)  * Spreadsheet programs:
+    * [Notepad](https://www.microsoft.com/en-us/p/windows-notepad/9msmlrh6lzf3) or [Notepad++](https://notepad-plus-plus.org/) (Windows)
+    * [Atom](https://atom.io/), [Brackets](https://brackets.io/) (free download options for Mac and Windows)
+    * [Text (Chromebook)](https://chrome.google.com/webstore/detail/text/mmfbcljfglbokpmkimbfghdkjmjhdgbg?hl=en)  
+  * Spreadsheet programs:
     * [Microsoft Excel (Windows or Mac)](https://nd.service-now.com/nd_portal?id=kb_article&sys_id=cf15b58edbaa3058310fa94ed3961935)
-	  * ND students have free access to the Microsoft Office suite through Office365
-	* [Apple Numbers (Mac)](https://www.apple.com/numbers/)
-	* [LibreCalc (open source Excel/Numbers alternative for Mac or Windows users)](https://www.libreoffice.org/download/download/)
-	* [Google Sheets (web-based option available through Google Drive)](https://www.google.com/sheets/about/)
+      * ND students have free access to the Microsoft Office suite through Office365
+    * [Apple Numbers (Mac)](https://www.apple.com/numbers/)
+    * [LibreCalc (open source Excel/Numbers alternative for Mac or Windows users)](https://www.libreoffice.org/download/download/)
+    * [Google Sheets (web-based option available through Google Drive)](https://www.google.com/sheets/about/)
 
-
-We'll also be working with a free software program called OpenRefine as part of our work in this lab.
-
-As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
-
-<blockquote><p>OpenRefine is described as 'a power tool for working with messy data' (<a href="http://web.archive.org/web/20141021040915/http://davidhuynh.net/spaces/nicar2011/tutorial.pdf">David Huynh</a>) - but what does this mean? It is probably easiest to describe the kinds of data OpenRefine is good at working with and the sorts of problems it can help you solve.</p>
-<br>
-<p>OpenRefine is most useful where you have data in a simple tabular format such as a spreadsheet, a comma separated values file (csv) or a tab delimited file (tsv) but with internal inconsistencies either in data formats, or where data appears, or in terminology used. OpenRefine can be used to standardize and clean data across your file.</p></blockquote>
-
-Navigate to https://openrefine.org/download.html in a web browser and download the appropriate version for your operating system.
-- If you are getting memory-related error messages, visit https://docs.openrefine.org/manual/installing#increasing-memory-allocation to troubleshoot.
+4. We'll also be working with a free software program called OpenRefine as part of our work in this lab.
+  * Navigate to https://openrefine.org/download.html in a web browser and download the appropriate version for your operating system.
+  * If you are getting memory-related error messages, visit https://docs.openrefine.org/manual/installing#increasing-memory-allocation to troubleshoot.
 
 # Tidy Data Principles
 
 4. Hadley Wickham's 2014 article in the *Journal of Statistical Software* outlines the foundations and principles of tidy data. 
 
-5. Article abstract: 
+Article abstract: 
 * <em>"A huge amount of effort is spent cleaning data to get it ready for analysis, but there has been little research on how to make data cleaning as easy and effective as possible. This paper tackles a small, but important, component of data cleaning: data tidying. Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. This framework makes it easy to tidy messy datasets because only a small set of tools are needed to deal with a wide range of un-tidy datasets. This structure also makes it easier to develop tidy tools for data analysis, tools that both input and output tidy datasets. The advantages of a consistent data structure and matching tools are demonstrated with a case study free from mundane data manipulation chores." (Hadley Wickham, Tidy Data, Vol. 59, Issue 10, Sep 2014, Journal of Statistical Software. http://www.jstatsoft.org/v59/i10.)</em>
 
 6. Wickham's tidy data principles have become widely used in data science and other statistical software applications. 
