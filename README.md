@@ -191,7 +191,7 @@ Article abstract:
     * [LibreCalc (open source Excel/Numbers alternative for Mac or Windows users)](https://www.libreoffice.org/download/download/)
     * [Google Sheets (web-based option available through Google Drive)](https://www.google.com/sheets/about/)
 
-26. Explore the three tables (sheets/tabs in the combined workbook or separate `.csv` files), thinking about the types of information included or represented in different tables and fields
+26. Explore the tables tables (sheets/tabs in the combined workbook or separate `.csv` files), thinking about the types of information included or represented in different tables and fields
 
 <blockquote>Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words.</blockquote>
 
