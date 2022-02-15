@@ -177,7 +177,7 @@ Article abstract:
 
 25. You can also download the four files in a compressed folder (`.zip`): [Google Drive link, ND users](https://drive.google.com/file/d/13VYKrh-ftTxRqB-zrHQM2okmV9nFhFq7/view?usp=sharing)
 
-26. Open the the `Combined_Workbook` file in a spreadsheet program (you can also open the three `.csv` files in a spreadsheet program or text editor).
+26. Open the the `Combined_Workbook` file in a spreadsheet program (you can also open the two `.csv` files in a spreadsheet program or text editor).
 
   * Text editors:
     * [TextEdit (Mac)](https://support.apple.com/guide/textedit/welcome/mac)
