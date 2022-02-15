@@ -50,7 +50,7 @@ The author consulted the following resources when building this tutorial:
 # Data
 
 1. The following data files are used in this tutorial, with Google Drive links (ND users only) provided below:
-- [`Combined_Workbook.xlsx`](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/edit?usp=sharing)
+- [`Combined_Workbook.xlsx`](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/copy)
 - [`Player_Birthplaces.csv`](https://drive.google.com/file/d/1Z2eCMvuMgbgZ1V1UGkRODYDkwBdtl564/view?usp=sharing)
 - [`Team_Locations.csv`](https://drive.google.com/file/d/1ORzrTd9Gz86scESFPb72rAdwagn9dxqr/view?usp=sharing)
 
