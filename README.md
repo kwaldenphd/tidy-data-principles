@@ -704,7 +704,7 @@ Q2: Explore both tables, thinking about what fields are represented in these dat
 
 Q3: Provide 3 distinct examples from the sample datasets that do not conform to tidy data principles. Include the example as well as an explanation.
 
-Q4: Discuss with a colleague what issues you are seeing in these datasets. What commonalities or patterns are you seeing?
+Q4: Take a step back and consider the pattern errors you're seeing in these datasets. What trends do you notice? Any thoughts or ideas as to how or why these pattern errors might have occurred?
 
 Q5: How would you address these pattern errors so the data conforms to tidy data principles? Explain what steps you would take to address at least 3 pattern errors. Each error explanation should include three parts:
 <ol type="a">
