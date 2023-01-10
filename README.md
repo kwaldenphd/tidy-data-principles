@@ -220,7 +220,7 @@ Open the the `Combined_Workbook` file in a spreadsheet program (you can also ope
 
 Explore the tables tables (sheets/tabs in the combined workbook or separate `.csv` files), thinking about the types of information included or represented in different tables and fields
 
-<blockquote>Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words.</blockquote>
+<blockquote>Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words- what types of information do they contain, and what types of data are you seeing?</blockquote>
 
 Type | Description | Example
 --- | --- | ---
@@ -354,7 +354,7 @@ We are barely scratching the surface of what is possible with data wrangling in 
 
 Spreadsheet software programs are another commonly-used tool for interacting with structured data. Some spreadsheet programs like Microsoft Office's Excel or Apple's Numbers are proprietary software installed on a local computer. Other proprietary spreadsheet programs like Google Sheets run online and are not installed locally. Open-source spreadsheet programs include OpenOffice's Calc and LibreOffice's Calc. 
 
-<blockquote>Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What was your overall feeling about working with data in a spreadsheet program?</blockquote>
+<blockquote>Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What were some of your overall impressions about working with data in a spreadsheet program?</blockquote>
 
 There are two options for the next section of the lab- working in Google Sheets or Microsoft Excel. You are only expected to complete one of those options. For either option, the workflow covered in this section of the lab loads individual tables into a workbook and uses spreadsheet program tools to interact with and clean (or "tidy") the data.
 
