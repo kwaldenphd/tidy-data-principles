@@ -76,7 +76,7 @@ Example:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=988247ce-5e46-4369-ac15-ae3e018ab956">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f1652a89-4b9e-4c00-bab8-ae3d00d325cb">Overview</a></td>
   </tr>
   </table>
 
@@ -110,6 +110,13 @@ We'll also be working with a free software program called OpenRefine as part of 
   * If you are getting memory-related error messages, visit https://docs.openrefine.org/manual/installing#increasing-memory-allocation to troubleshoot.
 
 # Tidy Data Principles
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=50892ecc-8bac-47c2-b18d-ae3800f72c71">Tidy Data Principles</a></td>
+  </tr>
+  </table>
 
 Hadley Wickham's 2014 article in the *Journal of Statistical Software* outlines the foundations and principles of tidy data. These principles have become widely used in data science and other statistical software applications. 
 * <em>"A huge amount of effort is spent cleaning data to get it ready for analysis, but there has been little research on how to make data cleaning as easy and effective as possible. This paper tackles a small, but important, component of data cleaning: data tidying. Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. This framework makes it easy to tidy messy datasets because only a small set of tools are needed to deal with a wide range of un-tidy datasets. This structure also makes it easier to develop tidy tools for data analysis, tools that both input and output tidy datasets. The advantages of a consistent data structure and matching tools are demonstrated with a case study free from mundane data manipulation chores." (Hadley Wickham, Tidy Data, Vol. 59, Issue 10, Sep 2014, Journal of Statistical Software. http://www.jstatsoft.org/v59/i10.)</em>
@@ -196,6 +203,13 @@ As described in Library Carpentry's ["Tidy data for librarians" tutorial](https:
  
 # Dealing With Messy Data
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4de4d7cf-9504-4d21-b333-ae3d00d4be55">Dealing With Messy Data</a></td>
+  </tr>
+  </table>
+
 Double check that you have the needed data files for this lab.
 
 - Google Sheets project with all needed files:
@@ -245,6 +259,13 @@ Compare what you see in these tables to the tidy data principles outlined above.
 </blockquote>
 
 # Data Wrangling Using OpenRefine
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fd43586a-51a9-4004-b60d-ae3d00d7bed1">Data Cleaning in Open Refine</a></td>
+  </tr>
+  </table>
 
 As described in Library Carpentry's ["Introduction to OpenRefine"](https://librarycarpentry.org/lc-open-refine/01-introduction/index.html):
 
@@ -351,6 +372,13 @@ Go through this same process for the `Team_Locations.csv` file.
 We are barely scratching the surface of what is possible with data wrangling in OpenRefine. The progam can also standardize capitalization, remove leading and trailing spaces, and address other commonly-found data errors. [Library Carpentry's OpenRefine tutorial](https://librarycarpentry.org/lc-open-refine/) goes in to greater detail about many of these other functions.
  
 # Data Wrangling Using A Spreadsheet Program
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f4378bf3-506b-4a11-b8f1-ae3d00ddc41d">Data Wrangling in a Spreadsheet Program</a></td>
+  </tr>
+  </table>
 
 Spreadsheet software programs are another commonly-used tool for interacting with structured data. Some spreadsheet programs like Microsoft Office's Excel or Apple's Numbers are proprietary software installed on a local computer. Other proprietary spreadsheet programs like Google Sheets run online and are not installed locally. Open-source spreadsheet programs include OpenOffice's Calc and LibreOffice's Calc. 
 
@@ -574,6 +602,13 @@ We are barely scratching the surface of what is possible with data wrangling in 
 - For more on Google Sheets: [10 Google Workspace tips to clean up data](https://support.google.com/a/users/answer/9604139?hl=en)
 
 # Workflows for Data Entry
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d04aeac7-2071-4b50-a680-ae480010f210">Workflows for Data Entry</a></td>
+  </tr>
+  </table>
 
 <blockquote>Q9: For the baseball datasets we have been working with in this lab, what do you think may have contributed to or caused the pattern errors we needed to address? How could these pattern errors be addressed in the data entry process?</blockquote>
 
