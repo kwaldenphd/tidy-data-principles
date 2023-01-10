@@ -352,65 +352,48 @@ We are barely scratching the surface of what is possible with data wrangling in 
  
 # Data Wrangling Using A Spreadsheet Program
 
-Spreadsheet software programs are another commonly-used tool for interacting with structured data. Some spreadsheet programs like Microsoft Office's Excel or Apple's Numbers are proprietary software installed on a local computer. Other proprietary spreadsheet programs like Google Sheets run online and are not installed locally.
-
-73. Open-source spreadsheet programs include OpenOffice's Calc and LibreOffice's Calc. 
+Spreadsheet software programs are another commonly-used tool for interacting with structured data. Some spreadsheet programs like Microsoft Office's Excel or Apple's Numbers are proprietary software installed on a local computer. Other proprietary spreadsheet programs like Google Sheets run online and are not installed locally. Open-source spreadsheet programs include OpenOffice's Calc and LibreOffice's Calc. 
 
 <blockquote>Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What was your overall feeling about working with data in a spreadsheet program?</blockquote>
 
-74. There are two options for the next section of the lab- working in Google Sheets or Microsoft Excel. You are only expected to complete one of those options.
+There are two options for the next section of the lab- working in Google Sheets or Microsoft Excel. You are only expected to complete one of those options. For either option, the workflow covered in this section of the lab loads individual tables into a workbook and uses spreadsheet program tools to interact with and clean (or "tidy") the data.
+
   * [Microsoft Excel](#microsoft-excel)
     * Steps 76-95
   * [Google Sheets](#google-sheets)
     * Steps 96-134
 
-75. For either option, the workflow covered in this section of the lab loads individual tables into a workbook and uses spreadsheet program tools to interact with and clean (or "tidy") the data.
-
 ## Microsoft Excel
 
 ### Loading Data
 
-76. There are two options for loading data files in Excel.
+There are two options for loading data files in Excel.
   * Import CSV files
   * Open Excel workbook
 
 #### Loading Data From CSV Files
 
-77. Open a blank Microsoft Excel file.
-
-78. Save the blank file as an Excel workbook.
+Open a blank Microsoft Excel file. Save the blank file as an Excel workbook.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_7.png?raw=true" alt="Capture_2"  /></p>
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figA.jpg?raw=true" alt="Capture_2"  /></p>
 
-79. Click on `Data` in the top menu bar.
-
-78. Under `Get Data` select the `From Text/CSV` option.
-
-79. In `Sheet1`, select the `Player_Birthplaces.csv` file.
+Click on `Data` in the top menu bar. Under `Get Data` select the `From Text/CSV` option. In `Sheet1`, select the `Player_Birthplaces.csv` file.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figB.jpg?raw=true" alt="Capture_2"  /></p>
 
-80. In the pop-up window, make sure `Comma` is selected as the delimiter, and switch `File Origin` to `UTF-8`.
-
-81. Click `Load`
+In the pop-up window, make sure `Comma` is selected as the delimiter, and switch `File Origin` to `UTF-8`. Click `Load`
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_17.png?raw=true" alt="Capture_2"  /></p>
 
-82. You should now see the CSV data in the Excel workbook.
-
-83. Go through the same process for the `team_locations.csv` file.
-
-84. Save the updated workbook.
+You should now see the CSV data in the Excel workbook. Go through the same process for the `team_locations.csv` file. Save the updated workbook.
 
 #### Loading Data as an Excel Workbook
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figC.jpg?raw=true" alt="Capture_2"  /></p>
 
-85. Alternatively, you can download the Google Sheets file as an Excel workbook (`.xlsx`).
-
-86. That workbook file includes both tables needed for this lab.
+Alternatively, you can download the Google Sheets file as an Excel workbook (`.xlsx`). That workbook file includes both tables needed for this lab.
 
 ### Data Cleaning in Excel
 
@@ -418,21 +401,19 @@ Spreadsheet software programs are another commonly-used tool for interacting wit
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_19.png?raw=true" alt="Capture_2"  /></p>
  
-87. Click the drop-down arrow next to a column header to see additional options for that field.
- 
-88. Use these sort, search, and filter options to address data pattern errors.
+Click the drop-down arrow next to a column header to see additional options for that field. Use these sort, search, and filter options to address data pattern errors.
 
 #### Find and Replace
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_20.png?raw=true" alt="Capture_2"  /></p>
 
-89. Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
+Alternatively, use the `Replace` option under `Find & Select` (in the `Home` menu section) to address pattern errors.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figAA.jpg?raw=true" alt="Capture_2"  /></p>
 
-90. Click the `Options` button to see additional options.
+Click the `Options` button to see additional options.
  
-91. Consult the following resources as needed to understand this data:
+Consult the following resources as needed to understand this data:
 - [ISO 3166 country code table (Wikipedia)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table)
 - [United Nations geographic regions](https://unstats.un.org/unsd/methodology/m49/)
 - [USPS list of state abbreviations](https://about.usps.com/who-we-are/postal-history/state-abbreviations.htm)
@@ -441,24 +422,22 @@ Spreadsheet software programs are another commonly-used tool for interacting wit
 
 <blockquote>To change all cells in a column, click the cell in the first non-header row. Press <code>Control</code> or <code>Command</code> and the down arrow key to select all cells with data in that column. Press <code>Control/Command</code> and <code>D</code> to copy the first value into the other selected cells. Alternatively, move your cursor over the bottom right-hand corner of the cell in the first non-header row. Click and drag the plus icon that appears down through the column to copy the value in the first cell into the subsequent cells.</blockquote>
 
-92. Go through this same process for the `team_locations` table.
+Go through this same process for the `team_locations` table.
 
 ### Saving and Exporting in Excel
 
-93. The default file type in Microsoft Excel is an Excel workbook (`.xlsx`).
+The default file type in Microsoft Excel is an Excel workbook (`.xlsx`).
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_21.png?raw=true" alt="Capture_2"  /></p>
 
-94. Click on the `File` menu section to show additional export options.
-
-95. Under `Export` you can see some of the other options for exporting the data in Excel.
+Click on the `File` menu section to show additional export options. Under `Export` you can see some of the other options for exporting the data in Excel.
   * While plain-text formats (tab separated values, `tsv`; comma separated values, `csv`, etc) are best for digital preservation and interoperability, they only accept a single table.
 
 ## Google Sheets
 
 ### Loading Data
 
-96. There are two options for loading data files in Google Sheets.
+There are two options for loading data files in Google Sheets.
   * Import CSV files
   * [Copy Google Sheets project](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/edit?usp=sharing)
 
@@ -466,221 +445,191 @@ Spreadsheet software programs are another commonly-used tool for interacting wit
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figD.jpg?raw=true" alt="Capture_2"  /></p>
 
-97. Open a blank Google Sheets project.
-
-98. Replace `Untitled spreadsheet` in the top-left hand corner with a meaningful file name.
+Open a blank Google Sheets project. Replace `Untitled spreadsheet` in the top-left hand corner with a meaningful file name.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figE.jpg?raw=true" alt="Capture_2"  /></p>
 
-99. Select `Import` under `File` in the top-level menu.
+Select `Import` under `File` in the top-level menu.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figF.jpg?raw=true" alt="Capture_2"  /></p>
 
-100. Select the option to `Upload` a file from your local computer, or drag and drop the `player_birthplaces.csv` file.
-
-101. Click `Select`.
+Select the option to `Upload` a file from your local computer, or drag and drop the `player_birthplaces.csv` file. Click `Select`.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figG.jpg?raw=true" alt="Capture_2"  /></p>
 
-102. A few settings to check before we import:
+A few settings to check before we import:
   * Change the `Import Location` to `Insert new sheet(s)`
   * Select `Comma` as the `Separator type`
   * Uncheck the `Convert text to numbers, dates, and formulas` box
   
-103. Click `Import data`.
+Click `Import data`.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figH.jpg?raw=true" alt="Capture_2"  /></p>
 
-104. The `player_birthplaces` table is now loaded in Google Sheets.
-
-105. Go through the same workflow for the `team_locations.csv` file.
+The `player_birthplaces` table is now loaded in Google Sheets. Go through the same workflow for the `team_locations.csv` file.
 
 #### Copying the Google Sheets Project
 
-106. Alternatively, you can make a copy of the Google Sheets project to your local Drive.
-
-107. The Google Sheets project includes both tables needed for this lab.
+Alternatively, you can [make a copy of the Google Sheets project](https://docs.google.com/spreadsheets/d/1kkvPaW1nzLVa4RzKlb71nqNqU4NE7lQyESipY_W9Gw8/copy) to your local Drive. The Google Sheets project includes both tables needed for this lab.
 
 ### Data Cleaning in Google Sheets
 
 #### Freezing the Header Row
 
-108. The first thing we want to do is freeze the first row in the table, which has our column headers.
-
-109. This way when we start sorting specific columns, the column labels will not be affected.
+The first thing we want to do is freeze the first row in the table, which has our column headers. This way when we start sorting specific columns, the column labels will not be affected.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figI.jpg?raw=true" alt="Capture_2"  /></p>
 
-110. Click `View` on the top-level menu, and select `Freeze`.
-
-111. Click `1 row` to freeze the first row in the table.
+Click `View` on the top-level menu, and select `Freeze`. Click `1 row` to freeze the first row in the table.
 
 #### Sorting
 
-112. Then, we can select a single column to sort by character or number values.
+Then, we can select a single column to sort by character or number values.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figJ.jpg?raw=true" alt="Capture_2"  /></p>
 
-113. Right click on a column label and select one of the `Sort sheet` options.
+Right click on a column label and select one of the `Sort sheet` options.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figK.jpg?raw=true" alt="Capture_2"  /></p>
 
-114. Or, click `Data` -> `Sort sheet` -> `Sort range` to sort by a particular column or selection.
-
-115. We can also sort by multiple columns.
+Or, click `Data` -> `Sort sheet` -> `Sort range` to sort by a particular column or selection. We can also sort by multiple columns.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figL.jpg?raw=true" alt="Capture_2"  /></p>
 
-116. Click `Data` -> `Sort range` -> `Advanced range sorting options` to access these options.
+Click `Data` -> `Sort range` -> `Advanced range sorting options` to access these options.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figM.jpg?raw=true" alt="Capture_2"  /></p>
 
-117. In the pop-up window, you can check the `Data has header row` box and then choose to sort by multiple columns.
-
-118. Click `Sort` to apply these settings.
+In the pop-up window, you can check the `Data has header row` box and then choose to sort by multiple columns. Click `Sort` to apply these settings.
 
 #### Filters
 
-119. We can also add filters to only see specific rows or values.
+We can also add filters to only see specific rows or values.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figN.jpg?raw=true" alt="Capture_2"  /></p>
 
-120. Click `Create a filter` under `Data`.
+Click `Create a filter` under `Data`.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figO.jpg?raw=true" alt="Capture_2"  /></p>
 
-121. Now we can set up filters for individual columns in the table.
+Now we can set up filters for individual columns in the table.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figP.jpg?raw=true" alt="Capture_2"  /></p>
 
-122. Click on the three horizontal lines next to a column label to open the filter menu.
+Click on the three horizontal lines next to a column label to open the filter menu.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figQ.jpg?raw=true" alt="Capture_2"  /></p>
 
-123. One option is to filter by condition.
+One option is to filter by condition.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figR.jpg?raw=true" alt="Capture_2"  /></p>
 
-124. Another option is to filter by values, which allows you to search for particular characters or select specific values.
-
-125. Click `OK` to apply the filter.
+Another option is to filter by values, which allows you to search for particular characters or select specific values. Click `OK` to apply the filter.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figS.jpg?raw=true" alt="Capture_2"  /></p>
 
-126. Google Sheets allows you to save particular filter settings/configurating as a `Filter view`.
+Google Sheets allows you to save particular filter settings/configurating as a `Filter view`.
   * `Data` -> `Filter views` -> `Save as filter view`
   
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figT.jpg?raw=true" alt="Capture_2"  /></p>
 
-127. You can also remove any filters from the Google Sheets project.
+You can also remove any filters from the Google Sheets project.
   * `Data` -> `Remove filter`
 
 #### Find and Replace in Google Sheets
 
-128. Google Sheets also supports find and replace operations.
+Google Sheets also supports find and replace operations.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figX.jpg?raw=true" alt="Capture_2"  /></p>
 
-129. Click `Find and replace` under the `Edit` menu tab.
+Click `Find and replace` under the `Edit` menu tab.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figY.jpg?raw=true" alt="Capture_2"  /></p>
 
-130. Google Sheets gives you options to match by case or for an entire cell's contents. You can also search using regular expressions.
-  * To learn more: ["Find and replace items using regular expressions,"](https://support.google.com/docs/answer/62754?p=spreadsheets_find_replace&visit_id=1644265064793-8550767213078292457&rd=1) Google Docs Support
+Google Sheets gives you options to match by case or for an entire cell's contents. You can also search using regular expressions.
+- To learn more: ["Find and replace items using regular expressions,"](https://support.google.com/docs/answer/62754?p=spreadsheets_find_replace&visit_id=1644265064793-8550767213078292457&rd=1) Google Docs Support
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figZ.jpg?raw=true" alt="Capture_2"  /></p>
 
-131. Click on the `Search` drop-down menu to see additional options for searching in Google Sheets.
+Click on the `Search` drop-down menu to see additional options for searching in Google Sheets.
 
 ### Saving and Exporting in Google Sheets
 
-132. Google Sheets projects are cloud-based- they are stored in the cloud and are accessible via Google Drive.
+Google Sheets projects are cloud-based, which means they are stored online (in the cloud).
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figU.jpg?raw=true" alt="Capture_2"  /></p>
 
-133. Click on the `File` - `Download` menu to show export options.
+Click on the `File` - `Download` menu to show export options.
 
-134. Under `Download` you can see some of the other options for exporting the data.
-  * An Excel workbook (`.xlsx`) supports multiple tables or sheets in a single workbook file.
-  * Plain-text formats (tab separated values, `tsv`; comma separated values, `csv`, etc) are best for digital preservation and interoperability, but they only accept a single table.
+Under `Download` you can see some of the other options for exporting the data.
+- An Excel workbook (`.xlsx`) supports multiple tables or sheets in a single workbook file.
+- Plain-text formats (tab separated values, `tsv`; comma separated values, `csv`, etc) are best for digital preservation and interoperability, but they only accept a single table.
 
 ## Additional Resources and Next Steps
 
 <blockquote>Q8: Compare your experience working in a spreadsheet program (Excel or Google Sheets) to your experience working in OpenRefine. In what ways do you understand, perceive, or relate to the data differently through working in a spreadsheet program? Describe your experience cleaning this data in a spreadsheet program.</blockquote>
 
-135. We are barely scratching the surface of what is possible with data wrangling in Excel or Google Sheets.
-
-136. The progam can also standardize capitalization, remove leading and trailing spaces, and address other commonly-found data errors. 
-
-137. For more on Excel: [Library Carpentry's Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/) goes in to greater detail about many of these other functions.
-
-138. For more on Google Sheets: [10 Google Workspace tips to clean up data](https://support.google.com/a/users/answer/9604139?hl=en)
+We are barely scratching the surface of what is possible with data wrangling in Excel or Google Sheets. The progam can also standardize capitalization, remove leading and trailing spaces, and address other commonly-found data errors. 
+- For more on Excel: [Library Carpentry's Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/) goes in to greater detail about many of these other functions.
+- For more on Google Sheets: [10 Google Workspace tips to clean up data](https://support.google.com/a/users/answer/9604139?hl=en)
 
 # Workflows for Data Entry
 
 <blockquote>Q9: For the baseball datasets we have been working with in this lab, what do you think may have contributed to or caused the pattern errors we needed to address? How could these pattern errors be addressed in the data entry process?</blockquote>
 
-139. According to Library Carpentry's [Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/04-quality-control/index.html), "Quality assurance stops bad data from ever being entered by checking to see if values are valid during data entry. For example, if research is being conducted at sites A, B, and C, then the value V (which is right next to B on the keyboard) should never be entered. Likewise if one of the kinds of data being collected is a count, only integers greater than or equal to zero should be allowed."
+According to Library Carpentry's [Tidy Data for Librarians tutorial](https://librarycarpentry.org/lc-spreadsheets/04-quality-control/index.html), "Quality assurance stops bad data from ever being entered by checking to see if values are valid during data entry. For example, if research is being conducted at sites A, B, and C, then the value V (which is right next to B on the keyboard) should never be entered. Likewise if one of the kinds of data being collected is a count, only integers greater than or equal to zero should be allowed."
 
-140. Building in quality assurance constraints into a data entry workflow can help minimize pattern errors that require later cleaning.
+Building in quality assurance constraints into a data entry workflow can help minimize pattern errors that require later cleaning.
 
 ## Survey Versus Spreadsheet
 
-150. One option is use a survey with some pre-defined choices or drop-down options.
-
-151. Log into your Notre Dame Google Drive account.
+One option is use a survey with some pre-defined choices or drop-down options. Log into your Notre Dame Google Drive account.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_22.png?raw=true" alt="Capture_2"  /></p>
 
-152. Select the option to create a Google Form.
-
-153. Click on the `Blank Form` option.
+Select the option to create a Google Form. Click on the `Blank Form` option.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_23.png?raw=true" alt="Capture_2"  /></p>
 
-154. Explore the different question types. 
+Explore the different question types. 
 
 <blockquote>Q10: Describe how you would go about building a survey form or template for the <code>Tidy_Data_Lab_PlayerBirthplaces.csv</code> file. You DO NOT need to actually create or submit a survey form. Describe what types of questions and pre-defined question or field options could you use to more effectively generate the data in this file.</blockquote>
 
 ## Data Validation
 
-155. You can also use some of the built-in data validation options in a spreadsheet program.
-  * [Microsoft Excel](#data-validation-in-excel)
-    * Steps 156-159
-  * [Google Sheets](#data-validation-in-google-sheets)
-    * Steps 160-164
+You can also use some of the built-in data validation options in a spreadsheet program.
+- [Microsoft Excel](#data-validation-in-excel)
+- [Google Sheets](#data-validation-in-google-sheets)
 
 ### Data Validation in Excel
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_24.png?raw=true" alt="Capture_2"  /></p>
 
-156. Under `Data`, select the `Data Validation` option.
+Under `Data`, select the `Data Validation` option.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/Figure_25.png?raw=true" alt="Capture_2"  /></p>
 
-157. In the pop-up window, you can limit the  types of values that will be valid in a particular field. 
+In the pop-up window, you can limit the  types of values that will be valid in a particular field. You can also define a list of options or values which will show up as drop-down options for cells in that field.
 
-158. You can also define a list of options or values which will show up as drop-down options for cells in that field.
-
-159. Visit Microsoft Office's ["Apply data validation to cells"](https://support.office.com/en-us/article/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) article to learn more about data validation options.
+Visit Microsoft Office's ["Apply data validation to cells"](https://support.office.com/en-us/article/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) article to learn more about data validation options.
 
 ### Data Validation in Google Sheets
 
-160. Google Sheets also supports some data validation operations.
+Google Sheets also supports some data validation operations.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figV.jpg?raw=true" alt="Capture_2"  /></p>
 
-161. Select `Data validation` under the `Data` menu tab.
+Select `Data validation` under the `Data` menu tab.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figBB.jpg?raw=true" alt="Capture_2"  /></p>
 
-162. You can customize the cell range for specific validation settings.
+You can customize the cell range for specific validation settings.
 
 <p align="center"><img class=" size-full wp-image-55 aligncenter" src="https://github.com/kwaldenphd/tidy-data-principles/blob/main/figures/figW.jpg?raw=true" alt="Capture_2"  /></p>
 
-163. The `Criteria` drop-down list includes as range of options for data validation settings.
+The `Criteria` drop-down list includes as range of options for data validation settings.
 
-164. Visit Zapier's ["What is data validation in Google Sheets?"](https://zapier.com/blog/data-validation-google-sheets/) article to learn more about data validation options.
+Visit Zapier's ["What is data validation in Google Sheets?"](https://zapier.com/blog/data-validation-google-sheets/) article to learn more about data validation options.
 
 <blockquote>Q11: Describe how you would go about using data validation to build a template for the <code>player_birthplaces.csv</code> file. You DO NOT need to actually create or submit a template. Describe what data validation options and pre-defined field options could you use to more effectively generate the data in this file.</blockquote>
 
@@ -695,7 +644,7 @@ Spreadsheet software programs are another commonly-used tool for interacting wit
 
 Q1: What questions do you have about these principles? Which ones are unclear or confusing?
 
-Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words
+Q2: Explore both tables, thinking about what fields are represented in these datasets. Describe the data fields in your own words- what types of information do they contain, and what types of data are you seeing?
 
 Q3: Provide 3 distinct examples from the sample datasets that do not conform to tidy data principles. Include the example as well as an explanation.
 
@@ -710,7 +659,7 @@ Q5: How would you address these pattern errors so the data conforms to tidy data
 
 Q6: Compare your experience working in OpenRefine to other experiences you have had in a text editor or spreadsheet program. In what ways do you understand, perceive, or relate to the data differently through working in OpenRefine? Describe your experience cleaning this data in OpenRefine.
 
-Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What was your overall feeling about working with data in a spreadsheet program?
+Q7: Describe a past experience working with a spreadsheet program. What were you trying to do? How did it go? What were some of your overall impressions about working with data in a spreadsheet program?
 
 Q8: Compare your experience working in a spreadsheet program to your experience working in OpenRefine. In what ways do you understand, perceive, or relate to the data differently through working in Excel? Describe your experience cleaning this data in a spreadsheet program.
 
